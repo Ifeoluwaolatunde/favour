@@ -12,7 +12,32 @@
     </style>
 </head>
 <body>
+    <input type="number" value="what is the time" id="goody">
+  <button onclick="greet()" >Greet</button>
+  
+
     <script>
+        let p= new Date().getHours();
+
+      function greet(){
+        let time= new Date().getHours();
+        if(time>0 && time<12){
+            alert('Good morning')
+        }else if(time>12 && time<15 ){
+            alert('Good afternoon')
+        }else if(time>15 && time<23){
+            alert('Good evening')
+        }
+
+      }
+      let q= prompt('how old is U.I');
+      switch(a){
+        case 18:aalert('u are low')
+        brake;
+        case 20:
+      }
+
+
        /* let rokeebage = prompt('how old are you')
         let martinsage=prompt('how old is martins')
         alert(rokeebage%martinsage)*/
@@ -23,9 +48,12 @@
 
      /*  let a= new Date().getDay();
        let b= ['sunday', 'monday','tuesday','wednesday','thursday','friday','saturday']
-       alert( `Today is ${b[a]}`)
+       alert( `Today is ${b[a]}`)*/
+       
+       let k= new Date().getHours();
+         
 
-       const about={
+      /* const about={
         name:'Olatunde Ifeoluwa',
         gender:'girl',
         tribe:'yoruba',
@@ -56,15 +84,18 @@
     if(age>=18&& gender=='male'){
         alert('you can take beer')
     }*/
-    let age= prompt('your age?');
+   /* let age= prompt('your age?');
     let beverage=
     (age >= 22)? 'beer':'water';
     alert(beverage)
 
     let ab= 5;
     let dc= 6;
-    alert(ab< 20 && dc>7)
+    alert(ab< 20 && dc>7)*/
 
+    let a= prompt('how old are u')
+    let b= (a>= 18)? 'apply' : 'go back to school';
+    alert(b)
   
 
 
