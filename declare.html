@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+     <input type="number" id="first1">
+     <br><br>
+     <input type="number" id="second2">
+     <h3 id="answer"></h3>
+     <button onclick="david()">calculate</button>
+     <h1 id="sara">Good morning</h1>
+     <button onclick="changecontent()">click</button>
+
+    <script>
+        function changecontent(){ 
+        let x= document.getElementById('sara').innerText='<p>Go out</p>'
+        }
+       /* function david(){
+            let x= prompt('how old is mav');
+            let ifeage = x;
+            alert (ifeage + rookebage)
+        }*/
+      /*var input1= document.getElementById('first1').value;
+      var input2= document.getElementById('second2').value;
+        function david(){
+            var input1= document.getElementById('first1').value;
+            var input2= document.getElementById('second2').value;
+            let answer= input1 * input2;
+            document.getElementById('answer').innerHTML = answer;
+            
+        }*/
+       /* function  calage(birthyear){
+            return new Date().getFullYear()-birthyear;
+        }
+        let x= prompt('which year were u born?')
+        alert(calage(x))*/
+       
+        
+        let calAgeofretirment= (name, birthyear, retirmentage) =>{
+            const age= new Date().getFullYear()-birthyear;
+            const yearsleft= retirmentage-age;
+           return `${name},you are due to retire in ${yearsleft}year(s)time`
+           
+        }
+       console.log(calAgeofretirment('fogo',1997,60));
+       alert(calAgeofretirment('don',1995,55))
+
+
+       const fruitpieces=function(fruit){ 
+
+       }
+        /*let name = prompt('2+6 is ?')
+        function david(){
+            if (name == 5){
+                alert('you are close')
+            }
+            else if (name == 8){
+                alert('correct')
+            }
+            else{
+                alert('woop')
+            }
+        } david()*/
+        function checkage(age){
+            if (age >= 18){
+                return true
+            }else {
+                return confirm('do you  have your parent permission?')
+            }
+        }let g= prompt('how old are you?');
+        if (checkage(g)){
+            alert('access granted')
+        }else{
+            alert('access denied')
+        }
+    </script>
+
+</body>
+</html>

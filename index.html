@@ -3,343 +3,105 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="javassign.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
-      integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" 
-      crossorigin="anonymous">
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" 
-    crossorigin="anonymous"></script>
-   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css">
-    
-    <script src="script.js">
-    </script>
+    <title>Simple calculator</title>
     <style>
-
+        body{
+            background-image: url(newcal.png);
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        
+        .cal{
+            border: 2px solid grey;
+            width: 400px;
+            height: 200px;
+            padding-top: 5PX;
+            padding: 30px;
+            margin: 0px auto;
+        }
+        #fali{
+            width: 100px;
+            padding: 12px;
+            font-size: 15px;
+        }
+        #mali{
+            width: 100px;
+            padding: 12px;
+            font-size: 15px;
+        }
+        #answer{
+            font-size: 25px;
+        }
+         .bam{
+            margin-left: 15px;
+            width: 30px;
+         }
+        .bam:hover{
+            width: 30px;
+            padding: 5px;
+            box-shadow: 3px 3px 3px black;
+            margin-right: 5px;
+        }
+        @media  screen and (max-width: 768px){
+            body{
+                padding: 0px;
+            }
+            .cal{
+                width: 200px;
+                padding: 5px;
+                margin: 0px;
+                height: 400px;
+            }
+            .bam{
+                margin-left: 10px;
+            }
+        }
     </style>
 </head>
 <body>
-   <div class="mor"><h4> BRIEF HISTORY AND INFO OF JAVASCRIPT</h4></div>
-        <div class="bib">
-            <!--- <div style="display: flex;flex-direction: row;">  
-            <div style="background-color: black;color: white;margin-right: 40px;width: 300px;height: 200px;">
-            <h3>NOTIFICATION!</h3>
-            <button onclick="monday()" class="bam">click</button>
-            </div>-->
-               <div >
-
-                  <h1 style="margin-top: 70px;">JavaScript / ECMAScript </h1>
-                  <p>
-                    <h4>INTRODUCTION</h4>
-                  JavaScript was invented by Brendan Eich in 1995.<br>
-
-                It was developed for Netscape 2, and became the ECMA-262 standard in 1997.<br>
-
-                After Netscape handed JavaScript over to ECMA, the Mozilla foundation continued to develop 
-                JavaScript for the Firefox browser.<br>
-                Mozilla's latest version was 1.8.5. (Identical to ES5).<br>
-
-                Internet Explorer (IE4) was the first browser to support ECMA-262 Edition 1 (ES1).<br>
-                <br>
-
-                Year	ECMA	Browser<br>
-                1995	 	JavaScript was invented by Brendan Eich<br>
-                1996	 	Netscape 2 was released with JavaScript 1.0<br>
-                1997	 	JavaScript became an ECMA standard (ECMA-262)<br>
-                1997	ES1	ECMAScript 1 was released<br>
-                1997	ES1	IE 4 was the first browser to support ES1<br>
-                1998	ES2	ECMAScript 2 was released<br>
-                1998	 	Netscape 42 was released with JavaScript 1.3<br>
-                1999	ES2	IE 5 was the first browser to support ES2<br>
-                1999	ES3	ECMAScript 3 was released<br>
-                2000	ES3	IE 5.5 was the first browser to support ES3<br>
-                2000	 	Netscape 62 was released with JavaScript 1.5<br>
-                2000	 	Firefox 1 was released with JavaScript 1.5<br>
-                2008	ES4	ECMAScript 4 was abandoned<br>
-                2009	ES5	ECMAScript 5 was released<br>
-                2011	ES5	IE 9 was the first browser to support ES5 *<br>
-                2011	ES5	Firefox 4 was released with JavaScript 1.8.5<br>
-              </div>
-                <div style="margin-top: 90px;">
-                <p>
-                2012	ES5	Full support for ES5 in Safari 6 <br>
-                <br>
-                2012	ES5	Full support for ES5 in IE 10<br>
-                <br>
-                2012	ES5	Full support for ES5 in Chrome 23<br>
-                <br>
-                2013	ES5	Full support for ES5 in Firefox 21<br>
-                
-                2013	ES5	Full support for ES5 in Opera 15<br>
-                <br>
-                2014	ES5	Full support for ES5 in all browsers<br>
-                <br>
-                2015	ES6	ECMAScript 6 was released<br>
-                <br>
-                2016	ES6	Full support for ES6 in Chrome 51<br>
-                <br>
-                2016	ES6	Full support for ES6 in Opera 38<br>
-                <br>
-                2016	ES6	Full support for ES6 in Safari 10<br>
-                <br>
-                2017	ES6	Full support for ES6 in Firefox 54<br>
-                <br>
-                2017	ES6	Full support for ES6 in Edge 15<br>
-                <br>
-                  2018	ES6	Full support for ES6 in all browsers **
-                  
-                </p>
-                </div>
-          </div>
- <h1>Frequently Asaked Questions</h1>
-    <div class="accordion" id="parentdiv">
-       <div class="accordion-item">
-          <h2 class="accordion-header">
-               <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#first" style="background:radial-gradient(circle, darkblue, blue, blueviolet, pink, peru) ;"> 
-                Differences between JAVA and JAVASCRIPT
-               </button>
-          </h2>
-          <div class="accordion-collapse collapse" id="first" data-bs-parent="#parentdiv">
-             <div class="accordion-body"  id="ja">
-                  <div>
-                    <table style="margin-left: 40px;">
-                      <th>  DIFFERENCES BETWEEN JAVA & JAVASCRIPT</th>
-                      <tr>
-                        <td> <h4>Java</h4></td>
-                        <td> <h4>Javascript</h4></td>
-                      </tr>
-                      <tr>
-                        <td> Java is an object-based programming language</td>
-                        <td>JavaScript is an OOP (object-oriented program)</td>
-                      </tr>
-                      <tr>
-                        <td>JavaScript is more commonly used in web <br>applications like browsers</td>
-                        <td>Java is more widely used in app development, smart devices<br> and back-end applications</td>
-                      </tr>
-                    </table>
-                  </div>
-
-
-                    <div style="margin-left: 80px;">
-                    <h4>WHO uses JavaScript?</h4>
-                        <ul>
-                          <li>Mobile App developer</li>
-                          <li>Web developer</li>
-                          <li>UI/UX Engenieer</li>
-                          <li>Desktop</li>
-                          <li>Software developer</li>
-                      </ul>
-                  </div>
-  
-              </div>
-          </div>
-        </div>
-
-
-       
-        <div class="accordion-item">
-          <h2 class="accordion-header">
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#second" style="background:radial-gradient(circle, purple, blueviolet, pink, peru) ;">Examples on how javascript works</button>
-          </h2>
-          <div class="accordion-collapse collapse" id="second" data-bs-parent="#parentdiv">
-            <div class="accordion-body"  id="sa">
-              <div style="color: black;margin-right: 40px;width: 300px;height: 200px;border: 5px inset black;">
-                <h3>NOTIFICATION!</h3>
-                <button onclick="monday()" class="bam">click</button>
-                </div>
-                    <div style="width: 300px;height: 200px;border: 5px inset black;">
-                      <h4 id="demo"> About monday<br>
-                        Monday is the first day of the week,<br>
-                        a day to work hard for success</h4>
-                     <button class="mon" onclick="document.getElementById('demo').innerHTML='A good monday gives a good week assurance'">know more</button>
-                   </div>
-            </div>
-          </div>
-        </div>  
-        
-        <div class="accordion-item">
-          <h2 class="accordion-header">
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#fourth" style="background:radial-gradient(circle, purple,gray , pink,gold, peru) ;">Reason why we use javascript</button>
-          </h2>
-          <div class="accordion-collapse collapse" id="fourth" data-bs-parent="#parentdiv">
-            <div class="accordion-body" >
-              <!--purpose or reaseon-->
-              JavaScript allows you to create highly responsive interfaces that improve the user experience
-              and provide dynamic functionality, 
-              without having to wait for the server to react and show another page.
-            </div>
-
-        </div>
-  
-        <div class="accordion-item">
-          <h2 class="accordion-header">
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#third" style="background:radial-gradient(circle, rgb(0, 128, 49), greenyellow, pink, peru, gray) ;">How javascript works</button>
-          </h2>
-          <div class="accordion-collapse collapse" id="third" data-bs-parent="#parentdiv">
-            <div class="accordion-body" >
-              How does JavaScript work? JavaScript is considered a client-side scripting language,
-              which means that it operates on the user's browser and does not function on an external device. An example of a language that is not client-side would be MySQL,
-              a server-side language that handles any database requests.
-            </div>
-        </div>
-        <div class="accordion-item">
-            <h2 class="accordion-header">
-              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#fifth" style="background:radial-gradient(circle, purple, blueviolet, pink, peru) ;">How does javascript look like?</button>
-            </h2>
-            <div class="accordion-collapse collapse" id="fifth" data-bs-parent="#parentdiv">
-              <div class="accordion-body" >
-                JavaScript is a lightweight, cross-platform, single-threaded, and interpreted compiled programming language.
-                It is also known as the scripting language for webpages. It is well-known for the development of web pages,
-                and many non-browser environments also use it.
-              </div>
     
-          </div>
-          <div class="accordion-item">
-            <h2 class="accordion-header">
-              <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#sixth" style="background:radial-gradient(circle,black, gray, blueviolet, pink, peru) ;"> Things You Can Do With JavaScript</button>
-            </h2>
-            <div class="accordion-collapse collapse" id="sixth" data-bs-parent="#parentdiv">
-                <div class="accordion-body">
-                    <ul>
-                       Things You Can Do With JavaScript
-                        <li> Mobile Apps. You can use JavaScript to create mobile applications. ...</li>
-                        <li> Front-end Web Development. ...</li>
-                        <li> Back-end Web Development. ...</li>
-                        <li> JavaScript as a Serverless Computing Programming Langauge. ...</li>
-                        <li> Desktop Applications. ...</li>
-                        <li> Game Development. ...</li>
-                        <li> Artificial Intelligence. ...</li>
-                        <li>You can write plugins for popular applications.</li>
-                    </ul>
-                   
-                </div>
-              
-              </div>
-  
-           </div>
-           
-           <div class="accordion-item">
-            <h2 class="accordion-header">
-              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#seventh" style="background:radial-gradient(circle, purple, blueviolet, pink, peru) ;">Difference between comparison operators and logical operators</button>
-            </h2>
-            <div class="accordion-collapse collapse" id="seventh" data-bs-parent="#parentdiv">
-              <div class="accordion-body" >
-                <table>
-                  <th>Differences between comparison operators and logical operators</th>
-                  <tr>
-                    <td>comparison operators</td>
-                    <td>Logical operators</td>
-                  </tr>
-                  <tr>
-                    <td>comparison operators are operators that compares<br>
-                    values and return <strong>True or false</strong>
-                    </td>
-                    <td>Logical operators are operators that combine<br> multiple boolean expressions or values and provide a single<br>
-                    boolean output </td>
-                  </tr>
-                </table>
-                 <strong> !=</strong> will only check value regardless of operands type<br>
-                <strong>!==</strong> will comapare the operands considering the value and type of operands
-                <br>
-                <strong>!</strong> it reverses the aruguement
+        <div class="cal">
+            <h3>SIMPLE CALCULATOR</h3>
+            <input type="number" id="fali">
+            <span id="sign"></span>
+            <input type="number" id="mali"><br><br>
+            <span id="answer"></span><br><br><br>
+             <button style="font-size: 20px;" onclick="add()" class="bam" style="margin-right: 20px;"><strong>+</strong></button>
+             <button style="font-size: 20px;" onclick="minus()" class="bam" style="margin-right: 20px;"><strong>-</strong></button>
+             <button style="font-size: 20px;" onclick="multiply()" class="bam" style="margin-right: 20px;"><strong>*</strong></button>
+             <button style="font-size: 20px;" onclick="divide()" class="bam"><strong>/</strong></button><br><br><br>
+             <div><button><a href="history.html">HISTORY OF JavaScript</a></button></div>
+        </div>
+    <script>
+     function add(){
+        let a=  Number(  document.getElementById('fali').value);
+        let b= Number(  document.getElementById('mali').value);
+        let c= document.getElementById('sign').innerHTML=`<strong>+</strong>`;
+        let ans= a+b;
+        let d= document.getElementById('answer').innerHTML=`=${ans}`
+     }
 
-              </div>
-            </div>
-              <div class="accordion-item">
-                <h2 class="accordion-header">
-                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#eight" style="background:radial-gradient(circle, purple, blueviolet, pink, peru) ;font-size: 20px;font-weight: bolder;">Quiz</button>
-                </h2>
-                <div class="accordion-collapse collapse" id="eight" data-bs-parent="#parentdiv">
-                  <div class="accordion-body"  style="background-color: black;box-shadow: 5px 5px 5px 2px white;">
-                   <button onclick="guess()" style="background-color: green;border: 5px inset white;">Guess Nigeria's age</button>
-                   <button onclick="ife()" style="background-color: pink;border: 5px groove grey;">My bio</button>
-                  </div>
-      
-              </div>
-             
-  
-      </div>
-<br><br><br><br>
-
-
-
-
-
-
-
-
-
-                <script>
-                  /* let rokeebage = prompt('how old are you')
-                   let martinsage=prompt('how old is martins')
-                   alert(rokeebage%martinsage)*/
-           
-                  // let a='15';
-                   //let b='5';
-                  // alert(a*b)
-
-           
-                  let a= new Date().getDay();
-                  let b= ['sunday', 'monday','tuesday','wednesday','thursday','friday','saturday']
-                  alert( `Today is ${b[a]}`)
-
-                  let myname = prompt('Hi visitor, What is your name? ')
-                   let myvariable= `Welcome to my page ${myname}`
-                     alert(myvariable)
-           function ife(){
-                  const about={
-                   name:'Olatunde Ifeoluwa',
-                   gender:'girl',
-                   tribe:'yoruba',
-                   age:'16 yrs old',
-                   location:'ojoo Ibadan',
-                   food:'fried yam',
-                   height:'5ft',
-                   town:'Oyo state',
-                  }
-                
-                  alert(`My name is ${about.name}, I am  a ${about.age} ${about.tribe} ${about.gender} . I am from  ${about.town} and I live in ${about.location}`)
-                }
-                  function guess(){
-                let q= prompt('How old is Nigeria');
-                switch(+q){
-                  case 60:alert('it is more than that')
-                  break;
-                  case 62:alert('Almost there')
-                  break;
-                  case 65:alert('it is not up to that')
-                  break;
-                  case 63:alert('Correct! good job keep it up')
-                  break;
-                  default:alert('You are wrong')
-
-                }
-              }   
-               </script>
-
-           <!----  <h1 class="h1">WELCOME </h1>-->
-                  <!--- <div style="display: flex;flex-direction: row;">  
-                      <div style="background-color: black;color: white;margin-right: 40px;width: 300px;height: 200px;">
-                      <h3>NOTIFICATION!</h3>
-                      <button onclick="monday()" class="bam">click</button>
-                      </div>
-                    <div style="background-color: aqua;width: 300px;height: 200px;">-->
-                      <!--<h3 id="blu">About monday<br>
-                          Monday is the first day of the week,<br>
-                          a day to work hard for success
-
-                      </h3>
-                      <button onclick="document.getElementById('blu').innerHTML='A good monday gives a good week assurance'">know more</button>-->
-                    <!--- <h2 id="demo"> About monday<br>
-                          Monday is the first day of the week,<br>
-                          a day to work hard for success</h2>
-                      <button class="mon" onclick="document.getElementById('demo').innerHTML='A good monday gives a good week assurance'">know more</button>
-                    
-                      </div>-->
-  
-
-   
+     function minus(){
+        let e=  Number(  document.getElementById('fali').value);
+        let f= Number(  document.getElementById('mali').value);
+        let g= document.getElementById('sign').innerHTML=`<strong>-</strong>`;
+        let ans= e-f;
+        let h= document.getElementById('answer').innerHTML=`=${ans}`
+     }
+     function multiply(){
+        let i=  Number(  document.getElementById('fali').value);
+        let j= Number(  document.getElementById('mali').value);
+        let k= document.getElementById('sign').innerHTML=`<strong>*</strong>`;
+        let ans= i*j;
+        let l= document.getElementById('answer').innerHTML=`=${ans}`
+     }
+     function divide(){
+        let m=  Number( document.getElementById('fali').value);
+        let n=  Number( document.getElementById('mali').value);
+        let o= document.getElementById('sign').innerHTML=`*`
+        let ans= m/n
+        let p= document.getElementById('answer').innerHTML=`=${ans}`
+     }
+    </script>
 </body>
 </html>
