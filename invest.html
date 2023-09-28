@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="amount">Investment Amount</label>
+    <input type="number" id="amount">
+    <label for="duration">Select A Suitable Duration</label>
+     <select name="" id="duration">
+        <option value="1">1Month</option>
+        <option value="2">2Month</option>
+        <option value="3">3Month</option>
+        <option value="4">4Month</option>
+        <option value="5">5Month</option>
+        <option value="6">6Month</option>
+        <option value="7">7Month</option>
+        <option value="8">8Month</option>
+        <option value="9">9Month</option>
+        <option value="10">10Month</option>
+        <option value="11">11Month</option>
+        <option value="12">12Month</option>
+     </select>
+    <button id="rad">calculate</button>
+    <span id="ade"></span>
+
+    <script>
+     const amou= Number(document.getElementById('amount'));
+     const k= 15/100;
+     const roi= Number( amou*k);
+     const gad=document.querySelector('#rad')
+     const pa= document.getElementById('ade').innerHTML
+
+     
+     const car= document.querySelector('#duration').value;
+
+
+    document.getElementById('rad').addEventListener('click',()=>{
+     let invest=document.getElementById('amount').value;
+     let duration= document.getElementById('duration').value;
+     let profit=0.15*invest;
+     let withdrawl=Number(profit * duration)+ Number(invest);
+     document.getElementById('ade').innerHTML=`You will withdraw${withdrawl} after ${duration} you invest ${invest}with us `
+   ; })
+
+
+    /* gad.addEventListener("click",()=>{
+       if(duration.value == 'red'){
+         let ans= 1* roi ;
+         
+        ade.innerHTML=`You will withdraw${+ans} after 1Months you invest ${amou}with us `
+       }else if (car.value == 'blue'){
+         let ans= 2*roi;
+         let d= document.getElementById('ade').innerHTML=`You will withdraw${ans} after 2Months you invest ${amou}with us `
+       }else if(car.value == 'black'){
+        let ans=3*roi;
+        let d= document.getElementById('ade').innerHTML=`You will withdraw${ans} after 3Months you invest ${amou}with us `
+       }else if(car.value == 'yellow'){
+        let ans=4*roi;
+        let d= document.getElementById('ade').innerHTML=`You will withdraw${ans} after 4Months you invest ${amou}with us `
+       }else if(car.value == 'pink'){
+        let ans=5*roi;
+        let d= document.getElementById('ade').innerHTML=`You will withdraw${ans} after 5Months you invest ${amou}with us `
+       }else if(car.value == 'violet'){
+        let ans=6*roi;
+        let d= document.getElementById('ade').innerHTML=`You will withdraw${ans} after 6Months you invest ${amou}with us `
+       }else if(car.value == orange){
+        let ans=7*roi;
+        let d= document.getElementById('ade').innerHTML=`You will withdraw${ans} after 7Months you invest ${amou}with us `
+       }else if(car.value == brown){
+        let ans=8*roi;
+        let d= document.getElementById('ade').innerHTML=`You will withdraw${ans} after 8Months you invest ${amou}with us `
+       }else if(car.value == gold){
+        let ans=9*roi;
+        let d= document.getElementById('ade').innerHTML=`You will withdraw${ans} after 9Months you invest ${amou}with us `
+       }else if(car.value == silver){
+        let ans=10*roi;
+        let d= document.getElementById('ade').innerHTML=`You will withdraw${ans} after 10Months you invest ${amou}with us `
+       }else if(car.value == white){
+        let ans=11*roi;
+        let d= document.getElementById('ade').innerHTML=`You will withdraw${ans} after 11Months you invest ${amou}with us `
+       }else if(car.value == green){
+        let ans=12*roi;
+        let d= document.getElementById('ade').innerHTML=`You will withdraw${ans} after 12Months you invest ${amou}with us `
+       }
+
+     })*/
+
+
+
+
+     
+
+    </script>
+</body>
+</html>
