@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .jack{
+            display:flex ;
+            flex-direction: row;
+        }
+        .bag{
+            background-color: rgb(230, 111, 131);
+            padding: 20px;
+            padding-bottom: 50px;
+            width: 330px;
+            height: 550px;
+            border-radius: 5px;
+            margin-left: 430px;
+            margin-top: -540px;
+        }
+        .bag:hover{
+            background-color: rgb(230, 111, 131);
+            padding: 20px;
+            padding-bottom: 50px;
+            width: 330px;
+            height: 550px;
+            border-radius: 5px;
+            margin-left: 440px;
+            margin-top: -540px;
+            box-shadow: 0px 10px 5px 2px rgb(219, 219, 219);
+        }
+        .black{
+            background-color: rgb(29, 29, 158);
+            padding: 20px;
+            padding-bottom: 50px;
+            width: 400px;
+            height: 550px;
+            border-radius: 5px;
+        }
+        .black:hover{
+            background-color: rgb(29, 29, 158);
+            padding: 20px;
+            padding-bottom: 50px;
+            width: 400px;
+            height: 550px;
+            border-radius: 5px;
+            box-shadow: 0px 10px 5px 2px rgb(179, 178, 178);
+            margin-left: 15px;
+        }
+        .pink{
+            background-color: blueviolet;
+            padding: 20px;
+            padding-bottom: 50px;
+            width: 320px;
+            height: 550px;
+            border-radius: 5px;
+            margin-left: 830px;
+            margin-top: -620px;
+        }
+        .pink:hover{
+            background-color: blueviolet;
+            padding: 20px;
+            padding-bottom: 50px;
+            width: 320px;
+            height: 550px;
+            border-radius: 5px;
+            margin-left: 835px;
+            margin-top: -620px;
+            box-shadow: 0px 10px 5px 2px rgb(190, 190, 190);
+        }
+    .david{
+        width: 300px;
+        padding: 10px;
+        height: 500px;
+        background-color: white;
+        color: black;
+        font-size: 20px;
+        font-weight: bold;
+        border-radius: 5px;
+        
+    }
+    .vid{
+        width: 350px;
+        padding: 10px;
+        height: 500px;
+        background-color: white;
+        color: black;
+        font-size: 20px;
+        font-weight: bold;
+        border-radius: 5px;
+    }
+    .dang{
+        width: 290px;
+        padding: 10px;
+        height: 500px;
+        background-color: white;
+        color: black;
+        font-size: 20px;
+        font-weight: bold;
+        border-radius: 5px;
+        
+    }
+    .tade{
+        width: 300px;
+        margin-top: -40px;
+    }
+    .tade:hover{
+        box-shadow: 0px 0px 5px 2px rgb(29, 29, 158);
+    }
+    .bade{
+        background-color: rgb(29, 29, 158);
+        color: white;
+        padding: 5px;
+        border-radius: 5px;
+    }
+    #fali{
+        width: 100px;
+        padding:5px;
+        height: 40px;
+        margin-right: 10px;
+        border-radius: 5px;
+        margin-left: 20px;
+        font-size: 20px;
+        font-weight: bolder;
+    }
+    #mali{
+        width: 100px;
+        padding: 5px;
+        height: 40px;
+        margin-left: 10px;
+        border-radius: 5px;
+        font-size: 20px;
+        font-weight: bolder;
+        
+    }.bam{
+        width: 40px;
+        height: 30px;
+        font-size: 15px;
+        background-color: rgb(230, 111, 131);
+        margin-right: 4px;
+    }
+    #answer{
+        font-size: 20px;
+        font-weight: bolder;
+        margin-left: 20px;
+    }
+    #sign{
+        font-size: 20px;
+        font-weight: bolder;
+    }
+    @media screen and (max-width: 768px){
+        .jack{
+            display: flex;
+            flex-direction: column;
+        }
+        .bag{
+            background-color: rgb(230, 111, 131);
+            padding: 20px;
+            padding-bottom: 50px;
+            width: 330px;
+            height: 550px;
+            margin-left: 0px;
+            border-radius: 5px;
+            margin-top: 100px;
+        }
+        .bag:hover{
+            background-color: rgb(230, 111, 131);
+            padding: 20px;
+            padding-bottom: 50px;
+            width: 330px;
+            height: 550px;
+            border-radius: 5px;
+            margin-left: 10px;
+            margin-top: 100;
+            box-shadow: 0px 10px 5px 2px rgb(219, 219, 219);
+        }
+        .pink{
+            background-color: blueviolet;
+            padding: 20px;
+            padding-bottom: 50px;
+            width: 320px;
+            height: 550px;
+            border-radius: 5px;
+            margin-left: 0px;
+            margin-top: 70px;
+        }
+        .pink:hover{
+            background-color: blueviolet;
+            padding: 20px;
+            padding-bottom: 50px;
+            width: 320px;
+            height: 550px;
+            border-radius: 5px;
+            margin-left: 10px;
+            margin-top: 70px;
+            box-shadow: 0px 10px 5px 2px rgb(190, 190, 190);
+        }
+    }
+    </style>
+</head>
+<body>
+    <div class="jack">
+
+                <div class="black">
+                    <div class="vid">
+                        <h2 style="color: rgb(29, 29, 158);font-size: 40px;font-weight: bolder;"><i>INVESTMENT CALCULATOR</i></h2><br>
+                    <div> <input type="number" placeholder="input amount Invested" class="tade" id="amount" style="border-radius: 50px;padding: 15px;"><br> <label for="duration"><strong>Select Duration </strong></label>
+                        <select name="" id="duration" style="background-color: white;color: rgb(29, 29, 158);">
+                        <option value="1">1Month</option>
+                        <option value="2">2Month</option>
+                        <option value="3">3Month</option>
+                        <option value="4">4Month</option>
+                        <option value="5">5Month</option>
+                        <option value="6">6Month</option>
+                        <option value="7">7Month</option>
+                        <option value="8">8Month</option>
+                        <option value="9">9Month</option>
+                        <option value="10">10Month</option>
+                        <option value="11">11Month</option>
+                        <option value="12">12Month</option>
+                            </select><br><br>
+                            <button class="bade" id="rad"><i>Calculate</i></button>
+                            <span id="ade"></span>
+
+                    </div>
+                </div>
+
+    
+                <div class="bag">
+                    <div class="david">
+                        <h2 style="color: rgb(230, 111, 131);font-size: 40px;font-weight: bolder;"><i>SIMPLE CALCULATOR</i></h2><br>
+                        <div style="display: flex;flex-direction: row;"> 
+                            <input type="number" id="fali"><br>
+                        <span id="sign"></span><br>
+                        <input type="number" id="mali"><br>
+                        </div>
+                        <span id="answer"></span>
+                        <span id="answer" ></span><br>
+                       <div style="display: flex;flex-direction: row;"> 
+                                <button  onclick="add()" class="bam" style="margin-left: 20px;"><strong>+</strong></button>
+                                <button onclick="minus()" class="bam" ><strong>-</strong></button>
+                                <button  onclick="multiply()" class="bam" ><strong>*</strong></button>
+                                <button  onclick="divide()" class="bam" ><strong>/</strong></button><br><br><br>
+                        </div>
+                        
+            
+                    </div>
+                </div>
+
+
+                    <div class="pink">
+                        <div class="dang">
+                            <h2><i>ACCOMMODATION</i></h2>
+                            <!--<label for="accotype">Select Accommodation:</label>
+                            <select  id="accotype">
+                                <option value="val" disabled>Select your choice</option>
+                                <option value="val1">Public Accommodation</option>
+                                <option value="opt2">Hotel Accommodation</option>
+                            </select>
+                          
+                           <div id="roomtype" style="display: none;">
+                                <label for="roomtype">Select Room Type</label> 
+                                    <select >
+                                        <option value="">Comfort Zone(N5000-15000)</option>
+                                        <option value="">Rose Double(N15000-30000)</option>
+                                        <option value="">Exclusive offer(N50000-7500)</option>
+                                    </select>
+                            </div>  -->  
+                         
+
+                                 <label for="accotype">Select Accommodation</label>
+                                <select  id="accotype">
+                                    <option value="opt" disabled>Select your choice</option>
+                                    <option value="opt1">Public Accommodation</option>
+                                    <option value="opt2">Hotel Accommodation</option>
+                                </select>
+                                    <div id="roomtype" style="display: none;" >
+                                        <label for="roomtype">Select Room Type</label>
+                                        <select  >
+                                            <option value="">Comfort Zone(N5000-15000)</option>
+                                            <option value="">Rose Double(N15000-30000)</option>
+                                            <option value="">Exclusive offer(N50000-7500)</option>
+                                        </select>
+                        </div>
+    </div>
+    <script>
+          document.getElementById('rad').addEventListener('click',()=>{
+     let invest=document.getElementById('amount').value;
+     let duration= document.getElementById('duration').value;
+     let profit=0.15*invest;
+     let withdrawl=Number(profit * duration)+ Number(invest);
+     document.getElementById('ade').innerHTML=`You will withdraw N${withdrawl} after ${duration}Month(s) you invest N${invest}with us `
+   ; })
+
+
+
+     function add(){
+        let a=  Number(  document.getElementById('fali').value);
+        let b= Number(  document.getElementById('mali').value);
+        let c= document.getElementById('sign').innerHTML=`<strong>+</strong>`;
+        let ans= a+b;
+        let d= document.getElementById('answer').innerHTML=`=${ans}`
+     }
+
+     function minus(){
+        let e=  Number(  document.getElementById('fali').value);
+        let f= Number(  document.getElementById('mali').value);
+        let g= document.getElementById('sign').innerHTML=`<strong>-</strong>`;
+        let ans= e-f;
+        let h= document.getElementById('answer').innerHTML=`=${ans}`
+     }
+     function multiply(){
+        let i=  Number(  document.getElementById('fali').value);
+        let j= Number(  document.getElementById('mali').value);
+        let k= document.getElementById('sign').innerHTML=`<strong>*</strong>`;
+        let ans= i*j;
+        let l= document.getElementById('answer').innerHTML=`=${ans}`
+     }
+     function divide(){
+        let m=  Number( document.getElementById('fali').value);
+        let n=  Number( document.getElementById('mali').value);
+        let o= document.getElementById('sign').innerHTML=`*`
+        let ans= m/n
+        let p= document.getElementById('answer').innerHTML=`=${ans}`
+     }
+
+      /*const type1= document.querySelector('#accotype')
+      
+       type1.addEventListener("click", ()=>{
+        if (type1.value === 'value2'){
+                document.getElementById('roomtype').style.display='inline-block';
+        }
+        else if(type1.value == 'val1' ){
+            document.getElementById('roomtype').style.display= 'none';
+        }
+       })*/
+       
+       const type1= document.querySelector('#accotype')
+       
+            type1.addEventListener("click", ()=>{
+                if(type1.value ==='opt2'){
+                        document.getElementById('roomtype').style.display='inline-block';
+                }
+                else{
+                    document.getElementById('roomtype').style.display= 'none';
+                }
+            })     
+ 
+
+
+
+            
+            m=prompt('Enter a prime number from 20 to 150');
+            let o;
+            if(m<20 || m>150 || isNaN(m) || m=="" ){
+                alert('You have entered an invalid number')
+            }
+            else  {
+                for(o=20; o<m; o++){
+                    if(m%o == 1){
+                        alert('Yes,  it is  a prime number');
+                        break;
+                        
+                    }
+                    else if(m%o == 0){
+                        alert('No, this is not  a prime number');
+                        
+                    }
+                }
+            }
+    </script>
+</body>
+</html>
