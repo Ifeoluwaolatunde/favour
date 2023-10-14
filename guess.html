@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+      #body{
+        text-align: center;
+      }
+        #yoyo{
+            padding: 15px;
+        }
+        #mama{
+            padding: 7px;
+        }
+    </style>
+</head>
+<body id="body">
+    <div class="mag">
+        <h1>Guess My Number Game</h1>
+        <div >
+          <h3 id="fag"><strong>Start Guessing...</strong></h3>
+        </div>  
+         <form action="">
+            <input type="text" id="yoyo" placeholder="Guess a number from 1 to 20">
+         </form>
+         <h3 id="tem">The number is ??</h3>
+         <button id="baba"><h2>Check</h2></button>
+         <button id="mama"><h2>Play again</h2></button>
+         <p><h3 id="hs">Highest score:0</h3></p>
+    </div>
+
+
+
+      <script>
+         let secretno= Math.trunc(Math.random() *20)+ 1;
+           console.log(secretno);
+           let score=20;
+           let Highest=0;
+
+           document.getElementById('mama').style.display='none'
+
+
+
+           function scoreline(){
+            score=score-4;
+            if(score === 0){
+                document.getElementById('body').style.backgroundColor='red';
+                document.getElementById('tem').innerHTML='Game Over!! refresh page to start a new game';
+                document.getElementById('baba').innerHTML='GAME OVER';
+                document.getElementById('baba').style.backgroundColor='white';
+                document.getElementById('baba').style.color='red';
+                document.getElementById('mama').style.display='inline-block';
+                document.getElementById('baba').style.display='none';
+
+                
+                
+            }
+           }
+
+           mama.addEventListener('click',()=>{
+            secretno= Math.trunc(Math.random() *20)+ 1;
+            let score=20;
+           let Highest=0;
+            document.getElementById('body').style.backgroundColor='white';
+            document.getElementById('baba').style.display='inline-block';
+            document.getElementById('mama').style.display='none';
+            document.getElementById('baba').innerHTML='Check';
+            document.getElementById('baba').padding='7px';
+            document.getElementById('baba').style.color='black';
+            document.getElementById('tem').innerHTML='The number is??';
+            document.getElementById('fag').textContent='Start Guessing';
+            fag.style.color='blue';
+             scoreline()
+            
+
+             
+           })
+
+
+        baba.addEventListener('click',()=>{
+            let a=Number( document.getElementById('yoyo').value);
+            
+           
+
+            if(a<1 || a>20 || isNaN(a)){
+                document.getElementById('fag').innerHTML='Make sure You enter a VALID number from 1 to 20'
+                document.getElementById('fag').style.color='red'
+                scoreline()
+            }else if(a>secretno){
+                document.getElementById('fag').innerHTML='The guess is too high'
+                document.getElementById('fag').style.color='red'
+
+                scoreline()
+            }else if(a<secretno){
+                document.getElementById('fag').innerHTML='The guess is too low'
+                document.getElementById('fag').style.color='red'
+                scoreline()
+            }else if(a == secretno){
+                document.getElementById('fag').innerHTML='Correct';
+                document.getElementById('fag').style.color='white';
+                document.getElementById('fag').style.fontSize='20px';
+                document.getElementById('body').style.backgroundColor='green';
+                document.getElementById('baba').style.color='green';
+                document.getElementById('tem').innerHTML='Play again??';
+                document.getElementById('mama').style.display='inline-block';
+                document.getElementById('baba').style.display='none';
+                if (score>Highest){
+                document.getElementById('hs').innerHTML=`Highest Score: ${score}`;
+                }
+
+            }
+
+        }) 
+
+
+
+      </script>
+</body>
+</html>

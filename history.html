@@ -256,6 +256,7 @@
                    <button onclick="guess()" style="background-color: green;border: 5px inset white;">Guess Nigeria's age</button>
                    <button onclick="ife()" style="background-color: pink;border: 5px groove grey;">My bio</button>
                    <button onclick="greet()" style="background-color: black;border: 5px groove gray;color: white;">Time for Prayer</button>
+                   <button id="sade">Age of retirement</button>
                   </div>
       
               </div>
@@ -338,7 +339,17 @@
                   default:alert('You are wrong')
 
                 }
-              }   
+              }
+              let calAgeofretirment= (name, birthyear, retirmentage) =>{
+            const age= new Date().getFullYear()-birthyear;
+            const yearsleft= retirmentage-age;
+           return `${name},you are due to retire in ${yearsleft}year(s)time`
+           
+          }
+           console.log(calAgeofretirment('fogo',1997,60));
+           sade.addEventlistener('click',()=>{
+           alert(calAgeofretirment('don',1995,55))
+          })
                </script>
 
            <!----  <h1 class="h1">WELCOME </h1>-->
