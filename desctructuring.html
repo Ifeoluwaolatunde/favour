@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h4>
+       <ul>
+        <li id="sag">PRODUCT NAME:</li><br>
+        <li id="sab">PRICE:</li><br>
+        <li id="sad">DESCRIPTION:</li><br>
+        <li id="sam">COLOR:</li><br>
+       </ul>
+    </h4>
+
+   <script>
+
+    let product={
+        id:1,
+        name:'Laptop',
+        price:799.99,
+        category:'Electronics',
+    };
+    let updatedproduct={
+        ...product,
+        category:'Computer',
+        brand:'Toshiba',
+        description:'Latest model of Toshiba',
+        color:'Grey',
+
+    }
+    console.log(updatedproduct)
+    
+    let {category,brand,description,color,id,name,price}=updatedproduct;
+
+     document.getElementById('sag').innerHTML=  `PRODUCT NAME: ${name}`
+     document.getElementById('sab').innerHTML=   `PRICE:  N${price}`;
+     document.getElementById('sad').innerHTML=  `DESCRIPTION:  ${description}`;
+     document.getElementById('sam').innerHTML= `COLOR:  ${color}` ;
+;
+    
+
+    //  myarray=[1,2,3,4];
+    // const[olu ,yon,zon,pon]=myarray
+    // console.log(olu + rest)
+    
+
+    let array1=[2,3,4,5];
+    let array2=[6,7,8,9];
+     let mdc= [...array1,...array2]
+     let combination=mdc
+     console.log(combination)
+
+    let stuff=[1,3,4,5,8];
+    let filteredstuff=stuff 
+            .filter(w=> w>2)
+            .map(e=> e*e);
+            console.log(filteredstuff)
+
+
+    // let mynum=[1,2,3,4];
+    //  let[ade,malik,dami,seun]=mynum;
+    //  console.log(olu)
+
+     let person={
+         ame:'alice',
+         age:31,
+         work:'cook',
+     }
+     let{ame,age,work}=person;
+     console.log(work)
+
+     let azeez=[5,10,15,20]
+     let [don,...rest]=azeez
+
+      let mayo=   don + Number(...rest) + Number(...rest) + Number(...rest)+Number(...rest) + don 
+      console.log(mayo)
+     
+
+     
+   </script>
+
+
+
+
+</body>
+</html>

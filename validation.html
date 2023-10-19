@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+ <style>
+    body{
+        margin: 0px auto;
+        text-align: center;
+    }
+    .sade{
+        padding: 20px;
+       text-align: center;
+        justify-content: center;
+    }
+    .sade input{
+        padding: 7px;
+    }
+    button{
+        padding: 7px;
+        background: green;
+    }
+    #tem{
+        font-size: 20px;
+        
+    }
+ </style>
+</head>
+<body>
+    <div class="sade">
+        <input type="text" id="mab" placeholder="Age??">
+        <p id="tem"></p>
+        <input type="text"><br><br>
+        <button id="jare">Submit</button>
+    </div>
+  <iframe src="video2.mp4" frameborder="0" style="width: 300px;height: 200px;"></iframe>
+    <script>
+        
+
+         jare.addEventListener('click',()=>{ 
+            let b= document.getElementById('mab').value
+         if( isNaN(b)){
+            document.getElementById('tem').innerHTML='Pls input a valid value';
+            document.getElementById('tem').style.color='red';
+         }else if(b < 18){
+            document.getElementById('tem').innerHTML='Sorry you are underage';
+            document.getElementById('tem').style.color='red';
+         }else if(b = 18 || b>18){
+            document.getElementById('tem').innerHTML='Input is okay';
+            document.getElementById('tem').style.color='gray';
+         }
+        })
+
+    </script>
+</body>               
+</html>
