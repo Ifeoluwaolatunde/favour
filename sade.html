@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: purple;
+        }
+        .made{
+            background-color: rgb(185, 10, 185);
+            margin: 0px auto;
+            width: 300px;
+            border-radius: 20px 50px;
+        }
+        li{
+            list-style-type: none;
+            font-size: 20px;
+        }
+        .a{
+            color: black;
+            text-decoration: none;
+            font-weight: bolder;
+        }
+        button{
+            background-color: plum;
+        }
+    </style>
+</head>
+<body>
+        <ul>
+            <li><button><a href="guess.html"><i> Guess my Number </i></a></button></li>
+            <li><button><a href="history.html"><i> History of Java </i></a></button></li>
+            <li><button><a href="loan.html"><i> Calculators </i></a></button></li>
+            
+        </ul>
+
+
+            <div style="padding: 10px;padding-left: 20px;" class="made">
+                <h2><i> Welcome to United Tech</i></h2>
+                <h4> The employees who work in Engineering department are:</h4>
+                <ul style="background-color: plum;border-radius: 10px;">
+                    <li id="sade"></li>
+                    <li id="bade"></li>
+                    <li id="made"></li>
+                    <li id="ade"></li>
+                </ul>
+
+
+                <h4>
+                    <p>Product Developed by the above employees</p>
+                    <ul style="background-color: plum;padding: 7px;border-radius: 10px;">
+                    <li id="sag">PRODUCT NAME:</li><br>
+                    <li id="sab">PRICE:</li><br>
+                    <li id="sad">DESCRIPTION:</li><br>
+                    <li id="sam">COLOR:</li><br>
+                    </ul>
+                </h4>
+                <h4 id="dia" style="font-size: 20px;">bioufghj</h4>
+            </div>
+
+
+
+            <script>
+                let employeedata=[
+                    {
+                        id:1,
+                        name:'Alice',
+                        department:'sales',
+                    },
+                    {
+                        id:2,
+                        name:'Babalola',
+                        department:'sales',
+                    },
+                    {
+                        id:3,
+                        name:'Charlie',
+                        department:'Engineering',
+                    },
+                    {
+                        id:4,
+                        name:'David',
+                        department:'HR',
+                    },
+                    {
+                        id:5,
+                        name:'Evelyn',
+                        department:'Engineering',
+                    },
+                    {
+                        id:6,
+                        name:'Ojo',
+                        department:'marketing',
+                    },
+                    {
+                        id:7,
+                        name:'Abdulrasheed',
+                        department:'Engineering',
+                    },
+                    {
+                        id:8,
+                        name:'Korade',
+                        department:'marketing',
+                    },
+                    {
+                        id:9,
+                        name:'Ngochukwu',
+                        department:'HR',
+                    },
+                    {
+                        id:10,
+                        name:'Tunji',
+                        department:'Instructor',
+                    },
+                    {
+                        id:11,
+                        name:'Ayeni',
+                        department:'Engineering',
+                    }
+
+                ]
+
+                let Engineeringstudent= employeedata
+                                .filter(({department}) => department === 'Engineering')
+                                .map(({name})=>name)             
+                    sade.innerHTML=`${Engineeringstudent[0]}`;
+                    made.innerHTML=`${Engineeringstudent[1]}`;
+                    bade.innerHTML=`${Engineeringstudent[2]}`;
+                    ade.innerHTML=`${Engineeringstudent[3]}` ;  
+                    
+                    
+                    let product={
+                        id:1,
+                        name:'Laptop',
+                        price:799.99,
+                        category:'Electronics',
+                    };
+                    let updatedproduct={
+                        ...product,
+                        category:'Computer',
+                        brand:'Toshiba',
+                        description:'Latest model of Toshiba',
+                        color:'Grey',
+
+                    }
+                    console.log(updatedproduct)
+                    
+                    let {category,brand,description,color,id,name,price}=updatedproduct;
+
+                    document.getElementById('sag').innerHTML=  `PRODUCT NAME: ${name}`
+                    document.getElementById('sab').innerHTML=   `PRICE:  N${price}`;
+                    document.getElementById('sad').innerHTML=  `DESCRIPTION:  ${description}`;
+                    document.getElementById('sam').innerHTML= `COLOR:  ${color}` ;
+                
+
+                    let azeez=[5,10,15,20]
+                    let [don,...rest]=azeez
+
+                    let mayo=   don + Number(...rest) + Number(...rest) + Number(...rest)+Number(...rest) + don 
+                    document.getElementById('dia').innerHTML=(`Sum of 5,10,15 and 20=${mayo}`)
+
+            </script>
+</body>
+</html>
