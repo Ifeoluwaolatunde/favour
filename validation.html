@@ -25,33 +25,306 @@
         font-size: 20px;
         
     }
+    td{
+        border: 1px solid black;
+    }
+    table{
+        border: 1px solid black;
+    }
+    .error {
+             color: red;
+         }
  </style>
 </head>
-<body>
-    <div class="sade">
-        <input type="text" id="mab" placeholder="Age??">
+<body style="margin: 0px auto;">
+    <!--<div class="sade">
+        <label for="mab">PLS input today's date</label><input type="text" id="mab" placeholder="Date??">
         <p id="tem"></p>
-        <input type="text"><br><br>
+        <input type="text" id="bam" placeholder="password?"><br><br>
+        <p id="rad"></p>
+
         <button id="jare">Submit</button>
-    </div>
-  <iframe src="video2.mp4" frameborder="0" style="width: 300px;height: 200px;"></iframe>
+    </div>-->
+
+
+     <!--<form action="" cellpadding="2" cellspacing="2" border="1" style="margin: 0px auto;" name="formo" onsubmit="return(validate())">
+        <table>
+          <tr>
+            <td>
+                Name
+            </td>
+            <td name="name">
+                <input type="text"><br>
+                <span name="spa"></span>
+            </td>
+          </tr>
+          <tr>
+            <td>
+                Your age??
+            </td>
+            <td name="age">
+                <input type="text"><br>
+                <span name="spa"></span>
+            </td>
+          </tr>
+          <tr>
+            <td>
+                Email
+            </td>
+            <td>
+                <input type="text">
+            </td>
+          </tr>
+          <tr>
+            <td>
+                Zip code
+            </td>
+            <td>
+                <input type="text" name="zip">
+            </td>
+          </tr>
+          <tr>
+            <td>
+                Name
+            </td>
+            <td>
+                <select name="country" >
+                    <option value="-1">select your country</option>
+                    <option value="1">The U.S.A</option>
+                    <option value="2">Korea</option>
+                    <option value="3">Japan</option>
+                </select>
+            </td>
+          </tr>
+           <tr>
+            <td>
+
+            </td>
+            <td>
+                <input type="submit" onclick="validate()">
+            </td>
+           </tr>
+        </table>
+     </form>
+     <input type="text" id="name">
+     <button onclick="gum()">dfgh</button>-->
+
+
+     <h1> COMPLEX  FORM VALIDATION PREVENTING DEFAULT</h1>
+
+     <form id="registrationForm" method="GET" action="#">
+         <div>
+             <label for="username">Username:</label>
+             <input id="username" onInput="usernamevalidate()">
+             <span id="usernameError" class="error"></span>
+         </div><br>
+         <div>
+             <label for="email">Email:</label>
+             <input id="email" onInput="emailvalidate()">
+             <span id="emailError" class="error"></span>
+         </div><br>
+         <div>
+             <label for="password">Password:</label>
+             <input id="password" oninput="  passwordvalidate()">
+             <span id="passwordError" class="error"></span>
+         </div><br>
+         <div>
+             <label for="confirmPassword">Confirm Password:</label>
+             <input id="confirmPassword" oninput="confirmpassvalidate()">
+             <span id="confirmPasswordError" class="error"></span>
+         </div><br>
+         <button type="submit">Submit</button>
+     </form>
+     
+     
+
+  <!--<iframe src="video2.mp4" frameborder="0" style="width: 300px;height: 200px;"></iframe>-->
     <script>
+        function gum(){
+            let mo = /^\w+@[a-z]+\.[a-z]{2,3}$/;
+        if(!document.getElementById(name).match(mo)){
+            alert('great')
+            return false
+        }
+        else{
+            alert('craze')
+            return true
+        }
+        }
+        
+       
+
+let taiwo= document.getElementById('registrationForm');
+    let myusername= document.getElementById('username');
+    let usermessage= document.getElementById('usernameError');
+    let myemail = document.getElementById('email');
+    let emailmessage = document.getElementById('emailError');
+    let mypassword = document.getElementById('password');
+    let passmessage = document.getElementById('passwordError');
+    let myconfirm = document.getElementById('confirmPassword');
+    let confirmmessage = document.getElementById('confirmPasswordError');
+    const emailformat = /^\w+@[a-z]+\.[a-z]{2,3}$/;
+    const passformat= /^(?=.+[!@#$%^&(),.?":{}|<>])(?=.+\d)(?=.+[a-zA-Z]).{8,16}$/;
+
+    let tobi;
+
+    function usernamevalidate(){
+        if(!myusername.value){
+        usermessage.textContent='you must enter a username';
+        tobi=false;
+        }else{
+            usermessage.textContent='correct input';
+            usermessage.style.color='blue'
+        }
+    }
+
+    
+    function emailvalidate(){
+        if(!myemail.value){
+          emailmessage.textContent='email is required' ;
+          tobi=false; 
+        }else if(!myemail.value.match(emailformat)){
+          emailmessage.textContent='please enter a valid email';
+          tobi=false;    
+        }else{
+           emailmessage.textContent='valid email'; 
+           emailmessage.style.color='blue'
+        }
+    }
+
+    function passwordvalidate(){
+        if(!mypassword.value){
+          passmessage.textContent='password is required' ;
+          tobi=false; 
+        }else if(!mypassword.value.match(passformat)){
+          passmessage.textContent='password must at least a lower and uppercase letter, a number and special character and shoudl not be less that 8 digit and not more than 16 digit';
+          tobi=false;    
+        }else{
+           passmessage.textContent='strong password'; 
+           passmessage.style.color='blue'
+        }
+    }
+
+    function confirmpassvalidate(){
+        if(myconfirm.value==''){
+            confirmmessage.textContent="this field cannot be empty";
+            tobi=false;
+        }else if(myconfirm.value!==mypassword.value){
+            confirmmessage.textContent="your password does not match";
+            tobi=false;
+        }else{
+           confirmmessage.textContent='password match'; 
+           confirmmessage.style.color='blue'
+        }
+    }
+
+    taiwo.addEventListener('submit', (olu)=>{
+       olu.preventDefault();
+       tobi=true;
+       usernamevalidate();
+       emailvalidate();
+       passwordvalidate();
+       confirmpassvalidate();
+
+       if(tobi){
+        taiwo.submit()
+       }
+    })
+
+    
+        // function validate(){
+        //     let mail = /^\w+@[a-z]+\.[a-z]{2,3}$/;
+        //     let no=/^[0-9]+$/;
+        //     let usercountry=document.formo.name.value;
+        //     if(document.formo.name.value==''){
+        //        document.spa.innerHTML='please provide your name';
+        //        document.formo.name.focus();
+        //        return false;
+        //     }
+        //     if(document.formo.age.value.match(no)){
+        //        document.spa.innerHTML='please your age must be digits';
+        //        document.form.age.focus();
+        //        return false
+        //     }
+        //     if(document.formo.email.match(mail)){
+             
+        //     }
+        //     if( document.formo.zip.value.length!=5 ||isNaN(document.formo.zip.value)|| document.formo.zip.value==''){
+        //       document.spa.innerHTML='pls enter your zipcode';
+        //       document.formo.zip.focus();
+        //       return false
+        //     }
+        //     if(usercountry=='-1'){
+        //         document.spa.innerHTML='PLS select your country';
+        //         document.formo.country.focus();
+        //         return false;
+        //     }
+        //     else{
+        //         return true
+        //     }
+
+        // }
         
 
-         jare.addEventListener('click',()=>{ 
-            let b= document.getElementById('mab').value
-         if( isNaN(b)){
-            document.getElementById('tem').innerHTML='Pls input a valid value';
-            document.getElementById('tem').style.color='red';
-         }else if(b < 18){
-            document.getElementById('tem').innerHTML='Sorry you are underage';
-            document.getElementById('tem').style.color='red';
-         }else if(b = 18 || b>18){
-            document.getElementById('tem').innerHTML='Input is okay';
-            document.getElementById('tem').style.color='gray';
-         }
-        })
+        //  jare.addEventListener('click',()=>{ 
+        //     let b= document.getElementById('mab');
+        //     let c= document.getElementById('bam');
+        //     let d= /^\d{1,2}\/\d{1,2}\/\d{4}$/;
+        //     let k= /^[a-zA-Z]+$/;
+        //     let e= document.getElementById('tem');
+        //     let f=document.getElementById('rad');
 
+        //     if(b.match(d)){
+        //        e.innerHTML='input correct';
+        //     }else if(!(b.match(e))){
+        //         e.innerHTML='invalid input';
+        //     }
+        //     if(c.match(k)){
+        //         f.innerHTML='correct input';
+
+        //     }else if((c.match(k))){
+        //         f.innerHTML='invalid input';
+        //     }
+            
+
+            
+
+        //  if( isNaN(b)){
+        //     document.getElementById('tem').innerHTML='Pls input a valid value';
+        //     document.getElementById('tem').style.color='red';
+        //  }else if(b < 18){
+        //     document.getElementById('tem').innerHTML='Sorry you are underage';
+        //     document.getElementById('tem').style.color='red';
+        //  }else if(b = 18 || b>18){
+        //     document.getElementById('tem').innerHTML='Input is okay';
+        //     document.getElementById('tem').style.color='gray';
+        //  }
+        //  if (!bam){
+        //     d
+        //  }
+        //     let minval=5;
+        //     let maxval=15;
+        //     let myval=/^[a-zA-Z]+$/
+        //     if(bam.value<minval || bam.val>maxval){
+        //         rad.innerHTML=`Password should be more than ${minval} and less than ${maxval} characters`;
+        //     }else if(bam.value>minval || bam.val<maxval){
+        //         rad.innerHTML='input correct';
+        //     }else if (!(bam.value.match(myvalue))){
+        //         alert('invalid input')
+
+        //     }e
+         
+
+        //  for(let d=0;d<bam.length;d++){
+        //     if( isNaN(c)){
+        //     document.getElementById('tem').innerHTML='Pls input a valid value';
+        //     document.getElementById('tem').style.color='red';
+        //  }else if(){
+        //     document.getElementById('tem').innerHTML='Sorry you are underage';
+        //     document.getElementById('tem').style.color='red';
+        //  }
+        //})
+      
     </script>
 </body>               
 </html>
