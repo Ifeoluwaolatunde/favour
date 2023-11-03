@@ -168,6 +168,12 @@
         color: black;
         font-weight: bolder;
     }
+    .li{
+        border: 1px solid black;
+        padding: 3px;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        list-style-type: none;
+    }
     @media screen and (max-width: 768px){
         .jack{
             display: flex;
@@ -243,7 +249,7 @@
         .bag{
             background-color: rgb(230, 111, 131);
             padding: 20px;
-            padding-bottom: 50px;
+            padding-bottom: 30px;
             width: 300px;
             height: 400px;
             margin-left: 0px;
@@ -289,10 +295,24 @@
         color: black;
         font-weight: bolder;
        }
+       .li{
+        border: 1px solid black;
+        padding: 3px;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        list-style-type: none;
+        }
     }
     </style>
 </head>
 <body>
+
+
+    <ul>
+        <li><button><a href="index.html"><i> Guess my Number </i></a></button></li>
+        <li><button><a href="guess.html"><i> History of Java </i></a></button></li>
+        <li><button><a href="sade.html"><i> Destructuring </i></a></button></li>
+        
+    </ul>
     <div class="jack">
 
                 <div class="black">
@@ -434,8 +454,8 @@
             let duration= document.getElementById('duration').value;
             let profit=0.15*invest;
             let withdrawl=Number(profit * duration)+ Number(invest);
-            document.getElementById('ade').innerHTML=`You will withdraw N${withdrawl} after ${duration}Month(s) you invest N${invest}with us `
-    })
+            document.getElementById('ade').innerHTML=`You will withdraw N${withdrawl} after ${duration}Month(s) you invest N${invest}with us `;
+          })
 
        fine.addEventListener('click',()=>{
 
@@ -511,9 +531,9 @@
                 let total=Number(intrestrate+investO);
                 let monthly=Number(total / dura);
                 document.getElementById('write').innerHTML=`You will Repay N${total} by paying the sum of N${monthly} when you borrow
-                ${investO} for ${dura}months`
+                ${investO} for ${dura}months`;
 
-                })
+                });
 
                 let btn=document.querySelectorAll('button');
                 for(let z=0;z<btn.length;z++){
@@ -531,8 +551,7 @@
                                     ans.innerHTML=`=${i+j}`;
                                     k.innerHTML='+';
                                     ans.style.color='green' ;
-                                }
-                                 else if(btn[z].value=='ty2'){
+                                }else if(btn[z].value=='ty2'){
                                     ans.innerHTML=`=${i-j}`;
                                     k.innerHTML='-';
                                     ans.style.color='green' ;
@@ -547,14 +566,14 @@
                                     k.innerHTML='x';
                                     ans.style.color='green' ;
                                 }
-                            }) 
+                              
+                            })
                     
                     
                     
                   
                     
-
-                } 
+                  } 
 
       /*const type1= document.querySelector('#accotype')
       

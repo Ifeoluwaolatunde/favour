@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" 
+    integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" 
+    crossorigin="anonymous">
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" 
+    integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" 
+    crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="bootstrap-5.3.1-dist/css/bootstrap.min.css">
+    <style>
+        body{
+            background-image: url(hotelp.png);
+            background-attachment: relative;
+            background-size: cover;
+            
+        }
+        #carouselExampleCaptions{
+            width: 600px;
+            height: 600px;
+        }
+        .made{
+            display: flex;
+            flex-direction: row;
+        }
+
+        @media screen and (max-width:768px){
+            body{
+            background-image: url();
+            background-attachment: relative;
+            background-size: cover;
+            
+        } 
+            .made{
+            display: flex;
+            flex-direction: column;
+
+            }
+            .shala{
+                width:90%;
+                height:400px;
+            }
+            #carouselExampleCaptions{
+                width: 98%;
+                height:300px;
+            }
+            .carousel slide{
+                width:80%;
+            }
+            .male{
+                padding-bottom:30px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary" style="color:black;position: sticky;">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#"><i style="font-weight: bolder;">ROYAL HOTEL..</i></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#OLA" aria-controls="navbarSupportedContent">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="OLA">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active"  href="index.html"><strong> Guess my num </strong></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="Brief">History of javascript</a>
+              </li>
+              <li class="nav-item"><a  href="sade.html" style="color: black;text-decoration: none;font-weight: bold;margin-right: 5px;">Destructuring</a></li>
+             <li class="nav-item"><a  href="loan.html" style="color: black;text-decoration: none;font-weight: bold;">Calculators</a></li>
+              
+              
+          </div>
+        </div>
+      </nav>
+
+   <div style="text-align: center;">
+        <h2>Welcome to Royal Hotel</h2>
+        <h4><i> Your satisfaction is our priority ....</i></h4><br><br>
+    </div>    
+      <h5>Please select a suitable Accommodation for youself</h5>
+
+  <div class="made">
+
+
+    <div style="background-color: rgba(0, 0,0, 0.5);color: white;" class="male"> 
+        <h2><i>ACCOMMODATION</i></h2>
+            <label for="accotype">Select Accommodation</label>
+          <select  id="accotype">
+            <option value="opt" disabled>Select your choice</option>
+            <option value="opt1">Public Accommodation</option>
+            <option value="opt2">Hotel Accommodation</option>
+            </select>
+            <div id="roomtype" style="display: none;" >
+                
+                <input type="text" placeholder="pls input number of days" id="la"><br>
+                <label for="rooms">Select Room Type</label>
+                <select id="rooms" >
+                    <option value="val1">Comfort Zone N15000</option>
+                    <option value="val2">Rose Double N30000</option>
+                    <option value="val3">Exclusive offer N45000</option>
+                </select><br>
+                <span id="pay" style="display:none;"></span><br>
+                
+                <button onclick="countdown()" style="padding: 7px;border-radius: 10px;width: 160px;">Book Now</button>
+                <br>
+               <h1> <span id="sha"></span></h1>
+               <br><br><br>
+               <h4><i> Thanks for chosing ROYAL HOTEL.... </i></h4>
+
+
+            </div>   
+     </div>
+
+
+            <div>
+               <div class="shala">
+                <div id="carouselExampleCaptions" class="carousel slide" style="display: none;">
+                    <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                    </div>
+                    <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="hotel1.png" class="d-block w-100" alt="...">
+                        <div class="carousel-caption d-none d-md-block">
+                        <h5>Comfort Zone(N5000-15000)</h5>
+                        <p>A comfortable room which is pocket friendly.</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="hotel2.png" class="d-block w-100" alt="...">
+                        <div class="carousel-caption d-none d-md-block">
+                        <h5>Rose Double(N15000-30000)</h5>
+                        <p>A well furnitured room.</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="hotel1.png" class="d-block w-100" alt="...">
+                        <div class="carousel-caption d-none d-md-block">
+                        <h5>Exclusive offer(N50000-7500)</h5>
+                        <p>A room coming with executive treatment.</p>
+                        </div>
+                    </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+            </div>  
+            </div>    
+
+    
+                          
+                         
+         
+  </div>  
+  
+  
+
+  
+<script>
+
+   const type1= document.querySelector('#accotype')
+       
+       type1.addEventListener("click", ()=>{
+           if(type1.value ==='opt2'){
+                   document.getElementById('roomtype').style.display='inline-block';
+                   document.getElementById('carouselExampleCaptions').style.display='inline-block';
+           }
+           else{
+               document.getElementById('roomtype').style.display= 'none';
+               document.getElementById('carouselExampleCaptions').style.display='none';
+           }
+       })    
+       
+     const rooms=document.querySelector('#rooms')
+
+     rooms.addEventListener('click',()=>{
+      let vava=document.getElementById('la').value;
+      let ten= 15000
+
+        if(rooms.value === 'val1'){
+
+            let vava=document.getElementById('la').value;
+          let ten= 15000;
+          payable=vava*ten;
+           document.getElementById('pay').style.display='inline-block';
+           document.getElementById('pay').style.fontWeight='bolder'
+           document.getElementById('pay').innerHTML=`you will pay N${payable}for Comfort zone room using ${vava}day(s) `  
+        }else if(rooms.value ==='val2'){
+            let vava=document.getElementById('la').value;
+          let three= 30000;
+          payable=vava*three;
+           document.getElementById('pay').style.display='inline-block';
+           document.getElementById('pay').style.fontWeight='bolder'
+           document.getElementById('pay').innerHTML=`you will pay N${payable}for Comfort zone room using ${vava}day(s) `  
+        }
+        else if(rooms.value === 'val3'){
+            let vava=document.getElementById('la').value;
+          let four= 45000;
+          payable=vava*four;
+           document.getElementById('pay').style.display='inline-block';
+           document.getElementById('pay').style.fontWeight='bolder'
+           document.getElementById('pay').innerHTML=`you will pay N${payable}for Comfort zone room using ${vava}day(s) `  
+        }
+
+     })
+
+
+       function countdown(){
+        // let inp=parseInt( document.getElementById('la').value);
+        //  let now=new Date().getTime();
+        //  let mycount=inp*86400000;
+        //  let just=now +mycount;
+
+        //    yoyo=setInterval( function (){
+        //     let now=new Date().getTime();
+        //     let distance=just-now;
+        //     let days=math.floor(distance/(24*60*60*1000));
+        //     let mins=math.floor(distance % (24*60*60*1000) / (60*60*1000));
+        //     let sec=math.floor(distance % (60*60*1000) / (60*1000));
+            
+        //   document.getElementById('sha').innerHTML=`Your rent expires in ${days}day(s) ${hours}hours ${mins}minutes and ${sec}seconds`
+        //   if(distance<=0){
+        //     document.getElementById('sha').innerHTML='Your rent has expired ,Pls pack out'
+        
+
+        let daysused=parseInt( document.getElementById('la').value);
+            let now= new Date().getTime();
+           let mycountdown= 86400000*daysused;
+           let distance = Number(now + mycountdown) ;
+           
+           yoyo=setInterval(function(){ 
+            let now=new Date().getTime();
+            let jus=Number(distance-now)
+            let days=Math.floor(jus/(1000*60*60*24));
+            let hours=Math.floor(jus %(1000*60*60*24) /(1000*60*60));
+            let mins=Math.floor(jus %(1000*60*60)/ (1000*60) );
+            let sec=Math.floor(jus % (1000*60)/ (1000));
+          
+            document.getElementById('sha').innerHTML=`Your rent expires in ${days}day(s) ${hours}hours ${mins}minutes and ${sec}seconds`
+          if (distance <= 0){
+                clearInterval(yoyo);
+
+
+          }
+
+         },1000 )
+         
+       }
+
+       
+    //    function book(){
+    //     let sa=document.getElementById('la').value
+    //     if(roomtype==com){
+    //         let put=sa*15000
+    //     }
+    //     else if(roomtype===ros){
+    //         let put =sa*30000
+    //     }
+    //     else if(roomtype==ex){
+    //         let put=sa*45000
+    //      }
+
+
+        
+    //    }
+
+</script> 
+</body>
+</html>
