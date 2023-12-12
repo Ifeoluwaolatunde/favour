@@ -32,17 +32,97 @@
           margin-top: 90px;
           margin-left: 120px;
         }
+        .fot{
+      font-family:'Courier New', Courier, monospace;
+      }
+      .fot:first-child{
+        color: lightcoral;
+      }
+      .fot:last-child{
+        color: lightcoral;
+      }
+      li{
+        list-style-type: circle;
+      }
+      #olu{
+        padding: 10px;
+        border-radius: 5px;
+      }
+      .kall{
+        padding: 20px;
+        padding-left: 40px;
+        border: 2px solid lightseagreen;
+        border-radius: 50px 20px;
+        width:350px;
+        height: 400px;
+      }
+      .bagg{
+        width: 370px;
+        border: 3px dotted lightcoral;
+        padding: 10px;
+        border-radius: 50px 20px;
+      }
+      .gaab{
+      
+        width: 40%;
+      }
+
+
+      .made{
+            display: flex;
+            flex-direction: row;
+        }
+
+        .blader{
+                display: flex;
+                flex-direction: row;
+                
+              }
+
+      @media screen and (max-width:768px){
+
+        .made{
+              display: flex;
+              flex-direction: column;
+
+              }
+              .shala{
+                  width:90%;
+                  height:400px;
+              }
+              #carouselExampleCaptions{
+                  width: 98%;
+                  height:300px;
+              }
+              .carousel slide{
+                  width:80%;
+              }
+              .male{
+                  padding-bottom:30px;
+                  
+              }
+              .blader{
+                display: flex;
+                flex-direction: column;
+              }
+              .gaab{
+                width: 97%;
+              }
+      }  
     </style>
 </head>
 <body>
   <nav id="navbar-example2" class="navbar bg-body-tertiary px-3 mb-3" style="position: sticky;top: 0px;">
-    <a class="navbar-brand" href="#"><i>JAVA</i></a>
+    <a class="navbar-brand" href="#"><i style="font-weight: bolder;font-size: 30px;color: #0d6efd;">JAVA</i></a>
     <ul class="nav nav-pills">
       <li class="nav-item">
         <a class="nav-link" href="#scrollspyHeading1">History</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="#scrollspyHeading2">FAQ</a>
+      </li>
+      <li>
+        <a class="nav-link" href="todo.html">TO do list</a>
       </li>
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Dropdown</a>
@@ -336,6 +416,84 @@
                
     
         </div></p>
-       <br><br><br>
+        <br><br>
+        
+
+        
+
+
+       <script>
+
+
+            let p= new Date().getHours();
+
+            function greet(){
+              let time= new Date().getHours();
+              if(time == 6 ){
+                  alert('Go and pray subuhi')
+              }else if(time == 14 ){
+                  alert('Go and pray zuhr')
+              }else if(time == 17){
+                  alert('Good evening, go and pray ashri')
+              }else if(time == 19){
+                alert('Go and pray moghrib')
+              }else if(time == 20){
+                  alert('Go and pray ishai')
+              }
+            }
+
+
+              let a= new Date().getDay();
+              let b= ['sunday', 'monday','tuesday','wednesday','thursday','friday','saturday']
+              alert( `Today is ${b[a]}`)
+
+              let myname = prompt('Hi visitor, What is your name? ')
+              let myvariable= `Welcome to my page ${myname}`
+                alert(myvariable)
+            function ife(){
+              const about={
+              name:'Olatunde Ifeoluwa',
+              gender:'girl',
+              tribe:'yoruba',
+              age:'16 yrs old',
+              location:'ojoo Ibadan',
+              food:'fried yam',
+              height:'5ft',
+              town:'Oyo state',
+              }
+
+              alert(`My name is ${about.name}, I am  a ${about.age} ${about.tribe} ${about.gender} . I am from  ${about.town} and I live in ${about.location}`)
+            }
+              function guess(){
+            let q= prompt('How old is Nigeria');
+            switch(+q){
+              case 60:alert('it is more than that')
+              break;
+              case 62:alert('Almost there')
+              break;
+              case 65:alert('it is not up to that')
+              break;
+              case 63:alert('Correct! good job keep it up')
+              break;
+              default:alert('You are wrong')
+
+            }
+            }
+            let calAgeofretirment= (name, birthyear, retirmentage) =>{
+            const age= new Date().getFullYear()-birthyear;
+            const yearsleft= retirmentage-age;
+            return `${name},you are due to retire in ${yearsleft}year(s)time`
+
+            }
+            console.log(calAgeofretirment('fogo',1997,60));
+            // sade.addEventlistener('click',()=>{
+            // alert(calAgeofretirment('don',1995,55))
+            // })
+
+    
+
+         
+
+       </script>
 </body>
 </html>

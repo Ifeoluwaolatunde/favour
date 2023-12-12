@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+
+<style>
+  
+  .jiggy{
+    margin: 0px auto;
+    background-color: pink;
+    width:50%;
+    padding: 30px;
+  }
+  .fot{
+    font-family:'Courier New', Courier, monospace;
+    text-align: center;
+    font-size: 40px;
+    font-weight: bolder;
+  }
+  .fot:first-child{
+    color: lightcoral;
+  }
+  .fot:last-child{
+    color: lightcoral;
+  }
+  li{
+    list-style-type: circle;
+  }
+  #olu{
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 15px;
+    font-weight: bold;
+    
+  }
+  #ola{
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 15px;
+    font-weight: bold;
+  }
+  .kall{
+    padding: 20px;
+    padding-left: 40px;
+    border: 2px solid lightseagreen;
+    border-radius: 50px 20px;
+    width:400px;
+    height: 400px;
+  }
+  .bagg{
+    width: 420px;
+    border: 3px dotted lightcoral;
+    padding: 10px;
+    border-radius: 50px 20px;
+  }
+  .gaab{
+    margin: 0px auto;
+  }
+  .jiggy{
+    background-color: pink;
+    width:50%;
+    padding: 30px;
+  }
+  .bambam{
+    background-color: white;
+  }
+  #ade li{
+    text-decoration: underline;
+    list-style-type: square;
+    font-size: 20px;
+    font-weight: bold;
+    margin-right: 15px;
+  }
+  .wase{
+    word-spacing: 250px;
+  }
+  
+  #olu:hover{
+    outline: 1px solid rgb(248, 148, 165);
+  }
+  #ola:hover{
+    outline:1px solid rgb(248, 148, 165);
+  }
+  button:hover{
+    padding: 5px;
+    background-color: white;
+    color: pink;
+    font-weight: bolder;
+  }
+  .cc li{
+    list-style-type: none;
+   }
+   .ab button{
+    padding: 5px;
+    background-color: white;
+    color: pink;
+    font-weight: bolder;
+    text-decoration: none;
+   }
+ /* .gaab{
+    width: 450px;
+    border: 2px dashed lightpink;
+    border-radius: 20px 50px;
+    padding: 10px;
+    padding-left: 15px;
+  }*/
+  @media screen and (max-width: 768px){
+    .jiggy{
+    margin: 0px auto;
+    background-color: pink;
+    width:60%;
+    padding: 30px;
+   }
+   .cc li{
+    list-style-type: none;
+   }
+   .ab{
+    padding: 5px;
+    background-color: white;
+    color: pink;
+    font-weight: bolder;
+    text-decoration: none;
+   }
+    .wase{
+    word-spacing: 50px;
+    }
+    #olu{
+      padding: 7px;
+      border-radius: 5px;
+      width: 150px;
+    } 
+    #olu:hover{
+      outline: 1px solid rgb(248, 148, 165);
+    }
+    #ola{
+      width: 150px;
+    }
+    #ola:hover{
+      outline: 1px solid rgb(248, 148, 165);
+    }
+  }
+
+
+</style>
+<body>
+  <ul style="display: flex;flex-direction: row;" class="cc">
+    <li><button class="ab"><a href="guess.html" class="aa">History of java</a></button></li>
+    <li><button class="ab"><a href="loan.html" class="aa">Calculators</a></button></li>
+    <li><button class="ab"> <a href="sade.html" class="aa">Destructuring</a></button></li>
+    <li><button class="ab"> <a href="hotel.html" class="aa">Hotel Booking</a></button></li>
+  </ul>
+    <div class="jiggy">
+      <div>
+       
+        <div class="bambam" style=" display: flex;flex-direction: row;padding: 5px;border-radius: 10px;justify-content: center;">
+          <h1 class="fot">
+          To Do List
+          <img src="todo1.jpg" style="width: 100px;height: 100px;">
+         </h1>
+         <h4 class="das"> </h4>
+        </div> 
+        <div id="baba">
+         
+        </div>
+
+         <div class="bambam" style="padding: 20px;border-radius: 5px;">
+          <input type="text" placeholder="task" id="olu">
+
+          <button onclick="day()" style="background-color: lightcoral;border: none;color: white;padding: 10px;border-radius: 5px;">
+          
+          Add task</button>
+          <input type="text" placeholder="minutes" id="ola">
+          <span id="tare"></span>
+          <button onclick="life()" style="background-color: lightcoral;border: none;color: white;padding: 10px;border-radius: 5px;"> Start</button>
+           <h4 class="wase"> TASK   </h4>
+          <div >
+            <div style="display: flex;flex-direction: column;">
+             <ul id="ade">
+             
+             </ul>
+            </div> 
+          
+          <!-- <div style="display: flex;flex-direction: column;">
+           
+           <p  id="pass"><strong></strong></p>
+         </div> -->
+
+      </div>
+      <br><br><br>
+      <div>
+        <p  id="pass"><strong></strong></p>
+      </div>
+      <div>
+        <br><br><br><br>
+      </div>
+    </div>
+
+     
+
+
+
+      <!-- <div class="gaab">
+       <div class="bagg">
+          <div class="kall">
+
+            <h3 class="fot">To Do List</h3>
+            <input type="text" placeholder="task" id="olu">
+
+            <button onclick="day()" 
+            style="background-color: lightcoral;border: none;color: white;padding: 10px;border-radius: 5px;">
+            Add task</button>
+            <input type="text" placeholder="minutes" id="ola">
+            <span id="tare"></span>
+            <button onclick="life()"> Start</button>
+            <div style="display: flex;flex-direction: row;">
+              <div style="display: flex;flex-direction: column;">
+               <ul id="ade">
+               <li><h4> Task</h4></li>
+               </ul>
+              </div> 
+            
+            <div style="display: flex;flex-direction: column;">
+             <h4>Time countdown</h4>
+             <p  id="pass"><strong></strong></p>
+            </div>
+      
+
+          </div>
+            <span id="sha"></span>
+          </div>
+        </div>
+      </div> -->
+
+
+
+
+
+  <!--<input type="text" placeholder="task" id="olu">
+  <input type="text" placeholder="minutes" id="ola">
+  <button onclick="day()">Add task</button>
+  <br>
+  <br>
+  <br>
+  <ul id="ade">
+
+  </ul>-->
+
+
+
+
+
+  <script>
+      let a=new Date().getFullYear();
+      let b=new Date().getMonth()+1;
+         let c=new Date().getDate();
+         let d=new Date().getHours();
+         let e=new Date().getSeconds();
+         let f=new Date().getDay();
+         let g=new Date().getMilliseconds();
+       let h=new Date().getMinutes() ;
+
+        let i=new Date(); 
+         let q=new Date().getTime();
+         let da=new Date('july 24,2023');
+         let j=new Date('january,2 1970 00:00:00').getTime(); 
+        //  console.log(j)
+        //  console.log(da)
+        //  console.log(q)
+        // document.getElementById('bab').innerHTML=`${i}`
+         document.getElementById('baba').innerHTML=` Current time => ${d}: ${h}   `
+         document.getElementById('baba').style.color='black'
+         document.getElementById('baba').style.fontWeight='bold'
+         document.getElementById('das').innerHTML=`Year:${a}`
+
+
+    function day() {
+      let a = document.getElementById('olu').value;
+      let b = document.createTextNode(a)
+      let sap = document.createElement('span')
+      let c = document.createTextNode('\u2714');
+      let fa = document.createTextNode(' ')
+      sap.appendChild(c)
+      sap.style.backgroundColor = 'green'
+      sap.style.color = 'white'
+      sap.style.cursor = 'pointer'
+      sap.className = 'done';
+      let d = document.getElementsByClassName('done')
+      a.value=' '
+
+      let sag = document.createElement('span')
+      let f = document.createTextNode('\u00d7');
+      sag.appendChild(f)
+      sag.style.backgroundColor = 'red'
+      sag.style.color = 'white'
+      sag.style.cursor = 'pointer'
+      sag.className = 'undo';
+      let h = document.getElementsByClassName('undo')
+      document.getElementById('olu').value=' '
+      //document.getElementById('olu').style.color = 'white'
+      let ear = document.createElement('li');
+      ear.style.listStyleType = 'circle'
+      ear.appendChild(b);
+      ear.appendChild(fa);
+      ear.appendChild(sap)
+      ear.appendChild(fa)
+      ear.appendChild(sag)
+      ear.appendChild(fa)
+      ear.appendChild(fa)
+      ear.appendChild(fa)
+
+      let par = document.getElementById('ade');
+      par.appendChild(ear)
+
+      for (i = 0; i < d.length; i++) {
+        d[i].onclick = function () {
+
+          this.parentNode.style.textDecoration = 'line-through'
+          this.parentNode.style.cusor = 'pointer'
+        }
+      }
+
+      for (i = 0; i < h.length; ++i) {
+        h[i].onclick = function () {
+
+          this.parentNode.style.display = 'none'
+          this.parentNode.style.cusor = 'pointer'
+        }
+      }
+
+      document.getElementById('olu').value.style.fontSize='20px'
+
+    }
+
+
+    // let rad=parseInt( document.getElementById('ola').value);
+    // let now=new Date().getTime();
+    // let can=86400000+rad;
+    // let dis=Number(now+can);
+    //  yaya=setInterval(function(){
+    //   let now=new Date().getTime();
+    //   let jus=Number(distance-now)
+    //   let days=Math.floor(jus/(1000*60*60*24))
+
+    //  })
+
+    function life(){
+          let base= document.getElementById('ola').value
+          let ca=document.getElementById('olu').value
+        let daysused=parseInt( base);
+            let now= new Date().getTime();
+           let mycountdown= 60000*daysused;
+           let distance = Number(now + mycountdown) ;
+           
+           yoyo=setInterval(function(){ 
+            let now=new Date().getTime();
+            let jus=Number(distance-now)
+          //  let days=Math.floor(jus/(1000*60*60));
+            let hours=Math.floor(jus %(1000*60*60*24) /(1000*60*60));
+            let mins=Math.floor(jus %(1000*60*60)/ (1000*60) );
+            let sec=Math.floor(jus % (1000*60)/ (1000));
+          
+            document.getElementById('pass').innerHTML=`Your task (${ca}),time expires  in ${mins}minutes and ${sec}seconds`
+            document.getElementById('pass').style.fontSize='20px'
+            document.getElementById('pass').style.fontWeight='bold'
+          if (distance <= 0){
+                clearInterval(yoyo);
+
+
+          }
+
+         },1000 )
+         
+       }
+
+
+    
+
+  </script>
+</body>
+
+</html>

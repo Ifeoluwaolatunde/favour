@@ -29,217 +29,219 @@
     <button id="continue" style="background-color: yellow;">Continue</button>
     <button id="stop" style="background-color: red;">Stop</button>
     <h4 id="baba"></h4>
-
+    <p id="lade"><strong></strong></p>
     
     <script>
 
-        function chargebatery(){
-         cha=document.getElementById('charge')
-          cha.innerHTML='$#xf244';
-          setTimeout(function(){
-           cha.innerHTML='&#xf243';
+        // function chargebatery(){
+        //  cha=document.getElementById('charge')
+        //   cha.innerHTML='$#xf244';
+        //   setTimeout(function(){
+        //    cha.innerHTML='&#xf243';
 
-          },1000)
-          setTimeout(function(){
-            cha.innerHTML='&#xf242';
+        //   },1000)
+        //   setTimeout(function(){
+        //     cha.innerHTML='&#xf242';
 
-          },2000)
-          setTimeout(function(){
-            cha.innerHTML='&#xf241';
+        //   },2000)
+        //   setTimeout(function(){
+        //     cha.innerHTML='&#xf241';
 
-          },3000);
-          setTimeout(function(){
-            cha.innerHTML='&#xf240';
+        //   },3000);
+        //   setTimeout(function(){
+        //     cha.innerHTML='&#xf240';
 
-          },4000)
+        //   },4000)
 
-        }
-        chargebatery();
-        setInterval(chargebatery,5000)
-    //      let a=new Date().getFullYear();
-    //  let b=new Date().getMonth()+1;
-    //     let c=new Date().getDate();
-    //     let d=new Date().getHours();
-    //     let e=new Date().getSeconds();
-    //     let f=new Date().getDay();
-    //     let g=new Date().getMilliseconds();
-    //   let h=new Date().getMinutes() ;
-
-    //    let i=new Date(); 
-    //     let q=new Date().getTime();
-    //     let da=new Date('july 24,2023');
-    //     let j=new Date('january,2 1970 00:00:00').getTime(); 
-    //     console.log(j)
-    //     console.log(da)
-    //     console.log(q)
-    //     document.getElementById('bab').innerHTML=`${i}`
-    //     document.getElementById('baba').innerHTML=`${a} ${b} ${c} ${d} ${e} ${f} ${g} `
-
-    //        //set time out
-
-        //    function hi(who,where){
-        //     alert(`welcome to${where},${who}`)
-        //    }
-         //  setTimeout(hi,1000,'shade','school')
-        //    setInterval(hi,1000,'shade','school')
-        //    setInterval(()=>alert('welcome'),2000)
-
-
-
-        //    let mycount=new Date('dec 25,2023').getTime();
-        //    let yoyo= setInterval(counting, 1000);
-        // function counting() {
-        //     let now= new Date().getTime();
-        //     let dis= mycount - now;
-        //     let days=Math.floor(dis / (1000*24*60*60) );                                                                                                                                                                                                                                                                                                                              AAAAAAAAAAAAAA;
-        //     let hours=Math.floor((dis % (1000*60*60*24)) /(1000*60*60));
-        //     let minu=Math.floor((dis % (1000*60*60))/(1000*60));
-        //     let sec=Math.floor((dis % (1000*60))/(1000));
-
-        //     document.getElementById('ade').innerHTML=`we have${days}days ${hours}hours ${minu}minutes and${sec}seconds left before christmas`
-        //     if(sec == 0) {
-        //         clearInterval(yoyo)
-        //     }
         // }
-           
-        //    let mycountdown=new Date('dec 25,2023').getTime();
-        //     let yoyo= setInterval(countdown ,1000)
-        //       function countdown(){
-        //      let now= new Date().getTime();
-        //     let distance=mycountdown - now;
-        //     let days=Math.floor(distance / (1000*60*60*24));
-        //     let hours=Math.floor(distance %(1000*60*60*24) /(1000*60*60));
-        //     let minutes=Math.floor(distance%(1000*60*60)/ (1000*60) );
-        //     let sec=Math.floor(distance % (1000*60)/ (1000));
+        // chargebatery();
+        // setInterval(chargebatery,5000)
 
-        //     document.getElementById('ade').innerHTML=`we have${days}days ${hours}hours ${minutes}minutes and${sec}seconds left before christmas`
-        //   if (distance == 0){
-        //         clearInterval(yoyo);
-        //    }
-        //  }
+
+         let a=new Date().getFullYear();
+      let b=new Date().getMonth()+1;
+         let c=new Date().getDate();
+         let d=new Date().getHours();
+         let e=new Date().getSeconds();
+         let f=new Date().getDay();
+         let g=new Date().getMilliseconds();
+       let h=new Date().getMinutes() ;
+
+        let i=new Date(); 
+         let q=new Date().getTime();
+         let da=new Date('july 24,2023');
+         let j=new Date('january,2 1970 00:00:00').getTime(); 
+         console.log(j)
+         console.log(da)
+         console.log(q)
+         document.getElementById('bab').innerHTML=`${i}`
+         document.getElementById('baba').innerHTML=`${a} ${b} ${c} ${d} ${e} ${f} ${g} `
+
+           //set time out
+
+            function hi(who,where){
+            alert(`welcome to${where},${who}`)
+            }
+           setTimeout(hi,1000,'shade','school')
+            setInterval(hi,1000,'shade','school')
+            setInterval(()=>alert('welcome'),2000)
+
+
+
+            let mycount=new Date('dec 25,2023').getTime();
+           let yoyo= setInterval(counting, 1000);
+         function counting() {
+            let now= new Date().getTime();
+            let dis= mycount - now;
+           let days=Math.floor(dis / (1000*24*60*60) );                                                                                                                                                                                                                                                                                                                              AAAAAAAAAAAAAA;
+            let hours=Math.floor((dis % (1000*60*60*24)) /(1000*60*60));
+            let minu=Math.floor((dis % (1000*60*60))/(1000*60));
+             let sec=Math.floor((dis % (1000*60))/(1000));
+
+             document.getElementById('lade').innerHTML=`we have${days}days ${hours}hours ${minu}minutes and${sec}seconds left before christmas`
+           if(sec == 0) {
+                 clearInterval(yoyo)
+            }
+          }
+           
+          //  let mycountdown=new Date('dec 25,2023').getTime();
+          //   let yoyo= setInterval(countdown ,1000)
+          //     function countdown(){
+          //    let now= new Date().getTime();
+          //   let distance=mycountdown - now;
+          //    let days=Math.floor(distance / (1000*60*60*24));
+          //   let hours=Math.floor(distance %(1000*60*60*24) /(1000*60*60));
+          //   let minutes=Math.floor(distance%(1000*60*60)/ (1000*60) );
+          //    let sec=Math.floor(distance % (1000*60)/ (1000));
+
+          //    document.getElementById('ade').innerHTML=`we have${days}days ${hours}hours ${minutes}minutes and${sec}seconds left before christmas`
+          //  if (distance == 0){
+          //        clearInterval(yoyo);
+          //   }
+          // }
 
 
         
-         function countdown(){
+        //  function countdown(){
           
-          let daysused=parseInt( document.getElementById('lola').value);
-            let now= new Date().getTime();
-           let mycountdown= 86400000*daysused;
-           let distance = Number(now + mycountdown) ;
+        //   let daysused=parseInt( document.getElementById('lola').value);
+        //     let now= new Date().getTime();
+        //    let mycountdown= 86400000*daysused;
+        //    let distance = Number(now + mycountdown) ;
            
-           yoyo=setInterval(function(){ 
-            let now=new Date().getTime();
-            let jus=Number(distance-now)
-            let days=Math.floor(jus/(1000*60*60*24));
-            let hours=Math.floor(jus %(1000*60*60*24) /(1000*60*60));
-            let minutes=Math.floor(jus %(1000*60*60)/ (1000*60) );
-            let sec=Math.floor(jus % (1000*60)/ (1000));
+        //    yoyo=setInterval(function(){ 
+        //     let now=new Date().getTime();
+        //     let jus=Number(distance-now)
+        //     let days=Math.floor(jus/(1000*60*60*24));
+        //     let hours=Math.floor(jus %(1000*60*60*24) /(1000*60*60));
+        //     let minutes=Math.floor(jus %(1000*60*60)/ (1000*60) );
+        //     let sec=Math.floor(jus % (1000*60)/ (1000));
           
-            document.getElementById('baba').innerHTML=`we have${days}days ${hours}hours ${minutes}minutes and${sec}seconds left before christmas`
-          if (distance <= 0){
-                clearInterval(yoyo);
-            }
-          },1000) 
-        }
+        //     document.getElementById('baba').innerHTML=`we have${days}days ${hours}hours ${minutes}minutes and${sec}seconds left before christmas`
+        //   if (distance <= 0){
+        //         clearInterval(yoyo);
+        //     }
+        //   },1000) 
+        // }
 
 
 
-           function digitaltime(){
-            let hh= new Date().getHours();
-             let mm= new Date().getMinutes();
-           let ss= new Date().getSeconds();
-             let session='AM';
+        //    function digitaltime(){
+        //     let hh= new Date().getHours();
+        //      let mm= new Date().getMinutes();
+        //    let ss= new Date().getSeconds();
+        //      let session='AM';
 
-            if(hh == 0){
-                hh=12;
+        //     if(hh == 0){
+        //         hh=12;
             
-             }
-             if(hh > 12){
-                hh=hh-12;
-                session='PM'
-             }
-             if(hh == 12){
-                hh=hh;
-                session='PM'
-            } 
-            hh=(hh < 10)? '0'+hh:hh;
-            mm=(mm<10)? '0'+mm:mm;
-            ss=(ss<10)? '0'+ss:ss;
+        //      }
+        //      if(hh > 12){
+        //         hh=hh-12;
+        //         session='PM'
+        //      }
+        //      if(hh == 12){
+        //         hh=hh;
+        //         session='PM'
+        //     } 
+        //     hh=(hh < 10)? '0'+hh:hh;
+        //     mm=(mm<10)? '0'+mm:mm;
+        //     ss=(ss<10)? '0'+ss:ss;
            
        
 
             
 
-              document.getElementById('ade').innerHTML=`${hh}:${mm}:${ss}:${session}`
-              x=setTimeout(digitaltime,1000)
+        //       document.getElementById('ade').innerHTML=`${hh}:${mm}:${ss}:${session}`
+        //       x=setTimeout(digitaltime,1000)
 
-          } 
+        //   } 
           
-            digitaltime();
+        //     digitaltime();
 
 
-          let ade=document.getElementById('min')
-          let ife=document.getElementById('sec')
-           let startbtn=document.getElementById('start');
-           let pausebtn=document.getElementById('pause');
-           let contbtn=document.getElementById('continue');
-           let stopbtn=document.getElementById('stop');
+        //   let ade=document.getElementById('min')
+        //   let ife=document.getElementById('sec')
+        //    let startbtn=document.getElementById('start');
+        //    let pausebtn=document.getElementById('pause');
+        //    let contbtn=document.getElementById('continue');
+        //    let stopbtn=document.getElementById('stop');
             
 
-           contbtn.style.display='none';
-            pausebtn.style.display='none';
-            stopbtn.style.display='none';
+        //    contbtn.style.display='none';
+        //     pausebtn.style.display='none';
+        //     stopbtn.style.display='none';
 
-           etg=0;
-           let k;
+        //    etg=0;
+        //    let k;
 
-           function startengine(){
-            ++etg;
-            let mm=parseInt(etg/60);
-            let ss=etg%60;
-            mm=(mm<10)? '0'+mm:mm;
-            ss=(ss<10)? '0'+ss:ss;
-            ade.innerHTML=mm;
-            ife.innerHTML=ss;
+        //    function startengine(){
+        //     ++etg;
+        //     let mm=parseInt(etg/60);
+        //     let ss=etg%60;
+        //     mm=(mm<10)? '0'+mm:mm;
+        //     ss=(ss<10)? '0'+ss:ss;
+        //     ade.innerHTML=mm;
+        //     ife.innerHTML=ss;
 
-            startbtn.style.display='none'
-            pausebtn.style.display='inline-block';
-            stopbtn.style.display='inline-block';
+        //     startbtn.style.display='none'
+        //     pausebtn.style.display='inline-block';
+        //     stopbtn.style.display='inline-block';
 
-           }
+        //    }
 
-           function count(){
-            k=setInterval(startengine,1000)
-           }
-           function pauseengine(){
-            clearInterval(k)
-            contbtn.style.display='inline-block';
-            pausebtn.style.display='none';
-            stopbtn.style.display='inline-block';
-           }
-           function contengine(){
-            count()
-            pausebtn.style.display='inline-block';
-            contbtn.style.display='none'
-            startbtn.style.display='none'
-            stopbtn.style.display='inline-block'
-           }
-           function stopengine(){
-            etg=0;
-            ade.innerHTML=0+'0';
-            ife.innerHTML= 0+'0';
-            contbtn.style.display='none';
-            pausebtn.style.display='none';
-            startbtn.style.display='none';
-            clearInterval(k);
+        //    function count(){
+        //     k=setInterval(startengine,1000)
+        //    }
+        //    function pauseengine(){
+        //     clearInterval(k)
+        //     contbtn.style.display='inline-block';
+        //     pausebtn.style.display='none';
+        //     stopbtn.style.display='inline-block';
+        //    }
+        //    function contengine(){
+        //     count()
+        //     pausebtn.style.display='inline-block';
+        //     contbtn.style.display='none'
+        //     startbtn.style.display='none'
+        //     stopbtn.style.display='inline-block'
+        //    }
+        //    function stopengine(){
+        //     etg=0;
+        //     ade.innerHTML=0+'0';
+        //     ife.innerHTML= 0+'0';
+        //     contbtn.style.display='none';
+        //     pausebtn.style.display='none';
+        //     startbtn.style.display='none';
+        //     clearInterval(k);
 
 
-           }
+        //    }
 
-         startbtn.addEventListener('click',count);
-         pausebtn.addEventListener('click',pauseengine);
-         contbtn.addEventListener('click',contengine);
-         stopbtn.addEventListener('click',stopengine);
+        //  startbtn.addEventListener('click',count);
+        //  pausebtn.addEventListener('click',pauseengine);
+        //  contbtn.addEventListener('click',contengine);
+        //  stopbtn.addEventListener('click',stopengine);
 
 
 

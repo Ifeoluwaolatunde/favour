@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-image: url(drive.png);
+            background-attachment: relative;
+            background-size: cover;
+        }
+        button{
+            padding: 7px;
+            border-radius: 10px;
+            width: 100px;
+            border: none;
+        }
+        td{
+            font-size: 15px;
+        }
+        input{
+            padding: 7px;
+            border-radius: 5px;
+        }
+        input:hover{
+            outline: blue;
+        }
+        #bla{
+            background-color:rgba(0, 0, 0,0.3);
+            width: 40%;
+            height: 400px;
+            border-radius: 10 20;
+
+        }
+        #sal{
+            background-color: rgba(0, 0, 0, 0.5);
+            width: 40%;
+            height: 400px;
+            border-radius: 10 20;
+        }
+        #cal{
+            background-color: rgba(0, 0, 0, 0.5);
+            width: 40%;
+            height: 400px;
+            border-radius: 10 20;
+        }
+        @media screen and (max-width: 768px){
+            body{
+            background-image: url(drive.png);
+            background-attachment: relative;
+            background-size: cover;
+        }
+        button{
+            padding: 7px;
+            border-radius: 10px;
+            width: 100px;
+            border: none;
+        }
+        td{
+            font-size: 15px;
+        }
+        input{
+            padding: 7px;
+            border-radius: 5px;
+        }
+        input:hover{
+            outline: blue;
+        }
+            #bla{
+            background-color:rgba(0, 0, 0,0.3);
+            width: 60%;
+            height: 400px;
+            border-radius: 10 20;
+
+        }
+        #sal{
+            background-color: rgba(0, 0, 0, 0.5);
+            width: 60%;
+            height: 400px;
+            border-radius: 10 20;
+        }
+        #cal{
+            background-color: rgba(0, 0, 0, 0.5);
+            width: 60%;
+            height: 400px;
+            border-radius: 10 20;
+        }
+        }
+    </style>
+</head>
+<body style="margin: 0px auto;text-align: center;">
+    
+
+     
+       
+     <div id="bla" style="margin: 0px auto;">
+        <br><br>
+        <h1><i>Smile Drive</i></h1>
+        <br><br><br>
+        <h4>Welcome user...</h4>
+       <span> <input type="text" placeholder="your location" id='nik'> <input id='nike' type="text" placeholder="destination"></span>
+        <br>
+        <br>
+        <br>
+        <button style="background-color:white;color: blue;font-weight: bold;" id="book">Book Ride</button>
+     </div>
+
+     <div id="sal" style="margin: 0px auto;">
+        <h3><i>Enjoy your ride customer...</i></h3>
+        
+        <br><br>
+       <span id="mag"> <span id="mag"></span><br>Confirm<input type="checkbox"></span>
+        <h4>NOTE: End Trip when you get to your final destination</h4>
+        <h1> 
+            <span id="olu">00</span>
+            <span id="ola">:</span>
+            <span id="ade">00</span>
+        </h1>
+        <button style="background-color: green;" id="sta"> Start Trip</button>
+        <button style="background-color: red;" id="end">End Trip</button>
+     </div>
+     
+     <div id="cal" style="margin: 0px auto;text-align: center;justify-content: center;padding-left: 40px;">
+        <br><br>
+        <h3 style="font-weight: bolder;">Hope you had a nice trip?<span> <label for="checkbox">Click if yes</label><input type="checkbox"></span></h3>
+       
+       <br>
+    
+       <table cellpadding="5" cellspacing="0" border="1" width="60%" height="200" >
+        <th style="font-weight: bolder; ">RECIEPT FOR TRIP</th>
+        <tr>
+            <td>Base fare</td>
+            <td id="base"></td>
+        </tr>
+        <tr>
+            <td>Time</td>
+            <td id="timetaken"></td>
+        </tr>
+        <tr>
+            <td>Sum</td>
+            <td id="total"></td>
+        </tr>
+        <tr>
+            <td>Tax</td>
+            <td id="tax"></td>
+        </tr>
+        <tr>
+            <td style="font-weight: bolder;">
+                 TOTAL
+            </td>
+            <td id="payable"></td>
+        </tr>
+
+       </table>
+
+     </div>
+
+
+
+     <script>
+        let min=document.getElementById('olu');
+        let col=document.getElementById('ola');
+        let sec=document.getElementById('ade');
+        let start=document.getElementById('sta');
+        let stopbtn=document.getElementById('end');
+        let booking=document.getElementById('book');
+        let input1=document.getElementById('nik');
+        let input2= document.getElementById('nike');
+        
+        let a=document.getElementById('bla');
+        let b=document.getElementById('sal');
+        let c=document.getElementById('cal');
+        let bas=1000
+        let ten=20;
+        let bad=input1.value;
+        let bag=input2.value;
+
+       
+        b.style.display='none'
+        c.style.display='none'
+         document.getElementById('mag').innerHTML=`You are going from ${bad} to ${bag}`
+         document.getElementById('mag').style.visibility='hidden'
+         
+        booking.addEventListener('click',()=>{
+            b.style.display='inline-block';
+            document.getElementById('bla').style.display='none';
+        })   
+    
+
+         let ife=0
+         let k;
+          function startengine(){
+            ++ife;
+            let mins=parseInt( ife/60);
+            let secs=ife%60;
+            mins=(mins<10)? '0'+mins:min;
+            secs=(secs<10)? '0'+secs:secs;
+
+             min.innerHTML=mins;
+            sec.innerHTML=secs;
+           document.getElementById('sta').style.display='none'
+            
+            let a=20*(+mins) 
+            let b= 1000+(20*(+mins))
+            let c= (10/100)*b
+            let d=c+b
+            document.getElementById('timetaken').innerHTML=`${mins} x N20 = N${a}`
+            document.getElementById('total').innerHTML=`N${b}`
+            document.getElementById('tax').innerHTML=`N${c}`
+            document.getElementById('payable').innerHTML=`N${d}`
+            
+
+
+            
+          }
+         
+          function count(){
+            
+            k=setInterval(startengine,1000)
+        }
+        function stopengine(){
+            // ife=0;
+            //  min.innerHTML=0+'0';
+            //  sec.innerHTML= 0+'0';
+             
+            a.style.display='none'
+            b.style.display='none'
+           c.style.display='inline-block'
+             clearInterval(k)
+
+        } 
+        start.addEventListener('click',count);
+        stopbtn.addEventListener('click',stopengine);
+       
+        document.getElementById('base').innerHTML=`${bas}`
+        
+
+
+        // function slab(){
+        //     min.innerHTML=mins;
+        //   let sam=20*(+min);
+        //   document.getElementById('timetaken').innerHTML='20'
+        // }
+
+
+     </script>
+</body>
+</html>

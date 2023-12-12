@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!--asdfghjklp <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repellat deleniti atque, libero numquam eos quisquam beatae. Laborum exercitationem autem temporibus minima,
+         consequatur accusantium in. Eum illo fuga est exercitationem laborum!</p>
+         https://ifeoluwaolatunde.github.io/newfolder/-->
+
+         <ul id="hot">
+           <li>F.C.T</li>
+           <li>Lagos</li>
+         </ul>
+         <h4>Or</h4>
+         <input type="text" id="fam" placeholder="input your state" style="padding: 7px;">
+         <button onclick="create()">Submit</button>
+        <div id="lahot">
+            <h4>Title:<span id="isa"></span></h4>
+        </div>
+
+         <script>
+          function create(){
+            let mystate=document.getElementById('fam').value;
+             let state=document.createTextNode(mystate);
+             let myparent=document.getElementById('hot');
+             let tile=document.createElement('li');
+             myparent.appendChild(tile)
+             myparent.appendChild(state)
+             myparent.insertBefore(state,myparent.childNodes[2]);
+             myparent.insertBefore(tile,myparent.childNodes[2]);
+             document.getElementById('fam').value=' '
+             
+          }
+
+
+
+
+
+
+
+
+
+
+            //  function create(){
+            //     let tit=document.createElement('li');
+            //     tit.innerHTML='hoter';
+                
+            //     let text=document.createTextNode('BYE BYE');
+            //      let mytext=document.getElementById('isa');
+            //      mytext.appendChild(text)
+
+
+            //     let parent=document.getElementById('hot');
+            //     parent.appendChild(tit)
+
+            // }
+
+
+         </script>
+</body>
+</html>
