@@ -45,6 +45,13 @@
             height: 400px;
             border-radius: 10 20;
         }
+        .ac{
+            padding: 10px;
+            background-color: white;
+            color:slateblue;
+            border-radius: 5px;
+            text-decoration: none;
+        }
         @media screen and (max-width: 768px){
             body{
             background-image: url(drive.png);
@@ -87,7 +94,14 @@
             height: 400px;
             border-radius: 10 20;
         }
+        .ac{
+            padding: 10px;
+            background-color: white;
+            color:slateblue;
+            border-radius: 5px;
+            text-decoration: none;
         }
+    }
     </style>
 </head>
 <body style="margin: 0px auto;text-align: center;">
@@ -153,8 +167,10 @@
             <td id="payable"></td>
         </tr>
 
-       </table>
+       </table><br>
+       <button class="ac"><a href="brief.html">Back</a></button>  <button class="ac"><a href="todo.html">Next</a></button> 
 
+       
      </div>
 
 
@@ -174,16 +190,23 @@
         let c=document.getElementById('cal');
         let bas=1000
         let ten=20;
-        let bad=input1.value;
-        let bag=input2.value;
+       
 
        
         b.style.display='none'
         c.style.display='none'
-         document.getElementById('mag').innerHTML=`You are going from ${bad} to ${bag}`
-         document.getElementById('mag').style.visibility='hidden'
+         
          
         booking.addEventListener('click',()=>{
+            let bad=input1.value;
+          let bag=input2.value;
+
+            document.getElementById('mag').innerHTML=`You are going from ${bad} to ${bag}`
+         document.getElementById('mag').style.visibility='vissible'
+         document.getElementById('mag').style.fontSize='15px'
+         document.getElementById('mag').style.fontWeight='bolder'
+
+
             b.style.display='inline-block';
             document.getElementById('bla').style.display='none';
         })   

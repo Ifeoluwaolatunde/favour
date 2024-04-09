@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width , initial-scale=1.0">
+        <title>
+         Count down to Birthday
+        </title>
+        <style>
+            #ola{
+                font-size: 40px;
+                font-weight: bolder;
+                color: pink;
+                font-family: sans-serif;
+            }
+            #ola::first-letter{
+                color: black;
+            }
+            #ola::nth-child(2nd){
+                color: black;
+            }
+        </style>
+    </head>
+    <body>
+        <h1 id="ola"> </h1>
+        
+        <script>
+        let count= new Date('April 9,2024').getTime();
+        let now= new Date().getTime();
+         let lolo= setInterval(counting, 1000);
+         function counting(){
+          let now= new Date().getTime()
+          let cal= count - now;
+          let days= Math.floor(cal/(60*60*1000*24))
+          let hours= Math.floor((cal% (60*60*1000*24))/(60*60*1000))
+          let mins= Math.floor((cal% (60*60*1000))/(60*1000))
+          let secs= Math.floor((cal% (60*1000))/(1000))
+          document.getElementById('ola').innerHTML=`${days}DAYS , ${hours}HRS ,${mins}MINS and ${secs} to APRIL 9 !!!!`
+          if(days==0){
+            clearInterval(lolo)
+          }
+         }
+
+        </script>
+    </body>
+</html>

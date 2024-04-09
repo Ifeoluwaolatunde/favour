@@ -14,6 +14,24 @@
     <p>friday</p>
     <p>saturday</p>
     <p>sunday</p>-->
+
+      <input type="text" id="fag" placeholder="today is?" style="padding: 10px;border-radius: 10px;width: 100px;">
+
+
+      <input type="text" id="fab" placeholder="yesterday was?" style="padding: 10px;border-radius: 10px;width: 100px;">
+
+
+
+      <div style="width: 300px;height: 300px;margin-left: 400px;border-radius: 5px;background-color: palevioletred;">
+      <h3 style="font-family: sans-serif;color: purple;">Hello World</h3>
+        <br><br>
+        <button onclick="nike()">check </button>
+        <span id="tope"></span>
+
+      </div>
+
+
+
     <p>11</p>
     <p>13</p>
     <p>17</p>
@@ -45,6 +63,18 @@
 
 
     <script>
+
+       let fa= document.getElementById('fag').value
+       let fe=document.getElementById('fab').value
+
+     function nike(){
+        let fa= document.getElementById('fag').value
+       let fe=document.getElementById('fab').value
+      document.getElementById('tope').innerHTML=`Today is ${fa}  Yesterday was${fe}`
+      document.getElementById('tope').style.fontSize='15px'
+     }
+
+
         let mytext= document.querySelectorAll('p')
 
             
@@ -63,13 +93,6 @@
          console.log(`Day of the week ${r}: ${mytext[r].innerHTML}`)
 
          }
-
-         
-
-
-
-
-
          
          let good= document.querySelectorAll('p')
 
