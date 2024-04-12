@@ -3,210 +3,499 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-
-    <link rel="stylesheet" href="javassign.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
-      integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" 
-      crossorigin="anonymous">
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" 
-    crossorigin="anonymous"></script>
-   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css">
-   <link rel="stylesheet" href="bootstrap-5.3.1-dist/css/bootstrap.min.css">
-    
-    <script src="script.js">
-    </script>
+    <title>arithemetic</title>
+    <link rel="stylesheet" href="bootstrap-5.3.1-dist/css/bootstrap.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" 
+    rel="stylesheet" 
+    integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" 
+    crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" 
+    integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+     crossorigin="anonymous"></script>
+     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.min.js" 
+     integrity="sha384-Rx+T1VzGupg4BHQYs2gCW9It+akI2MM/mndMCy36UVfodzcJcF0GGLxZIzObiEfa" 
+     crossorigin="anonymous"></script>
     <style>
-      #body{
-        text-align: center;
-        background-color: black;
+      body{
+        background-color: darkblue;
+        color: white;
       }
-        #yoyo{
-            padding: 15px;
-        }
-        #mama{
-            padding: 7px;
-        }
-        .mag{
-            margin: 0px auto;
+        alert{
             background-color: black;
-            color: gray;
-            border: 2px groove gold;
-            width: 400px;
+            color: grey;
         }
-        #baba{
-            background-color: gray;
-            border: 1px solid gold;
-            border-radius: 5px;
+        .paul{
+          display: flex;
+          flex-direction: row;
         }
-        .aa{
-            background-color: gray;
-            color: black;
-            
+        .eli{
+          margin-top: 90px;
+          margin-left: 120px;
         }
-        .ab{
-            background-color: gray;
-            border: 1px solid gold;
+        .fot{
+      font-family:'Courier New', Courier, monospace;
+      }
+      .fot:first-child{
+        color: lightcoral;
+      }
+      .fot:last-child{
+        color: lightcoral;
+      }
+      li{
+        list-style-type: circle;
+      }
+      #olu{
+        padding: 10px;
+        border-radius: 5px;
+      }
+      .kall{
+        padding: 20px;
+        padding-left: 40px;
+        border: 2px solid lightseagreen;
+        border-radius: 50px 20px;
+        width:350px;
+        height: 400px;
+      }
+      .bagg{
+        width: 370px;
+        border: 3px dotted lightcoral;
+        padding: 10px;
+        border-radius: 50px 20px;
+      }
+      .gaab{
+      
+        width: 40%;
+      }
+
+
+      .made{
+            display: flex;
+            flex-direction: row;
         }
-        @media screen and (max-width: 768px){
-            .mag{
-                margin: 0px auto;
-            background-color: black;
-            color: gray;
-            border: 2px groove gold;
-            width: 200px;
-            }
-            #yoyo{
-            padding: 15px;
-            width: 150px;
-          }
-          .aa{
-            background-color: gray;
-            color: black;
-            
-          }
-          .ab{
-            background-color: gray;
-            border: 1px solid gold;
-          }
-        }
-    </style>
-</head>
-<body id="body">
 
-    <ul style="display: flex;flex-direction: row;">
-        <li><button class="ab"><a href="brief.html" class="aa">History of java</a></button></li>
-        <li><button class="ab"><a href="loan.html" class="aa">Calculators</a></button></li>
-        <li><button class="ab"> <a href="sade.html" class="aa">Destructuring</a></button></li>
-        <li><button class="ab"> <a href="hotel.html" class="aa">Hotel Booking</a></button></li>
-        <li><button class="ab"> <a href="todo.html" class="aa">To Do List</a></button></li>
-        <li><button class="ab"><a href="uber.html" class="aa"><i> UBER </i></a></button></li>
-    </ul>
-    <div class="mag">
-        <h1>Guess My Number Game</h1>
-        <div >
-          <h3 id="fag"><strong>Start Guessing...</strong></h3>
-        </div>  
-         <form action="">
-            <input type="text" id="yoyo" placeholder="Guess a number from 1 to 20">
-         </form>
-         <h3 id="tem">The number is ??</h3>
-         <button id="baba"><h2>Check</h2></button>
-         <button id="mama"><h2>Play again</h2></button>
-         <p><h3 id="hs">Highest score:0</h3></p>
-
-
-         <br><br><br>
-         <button onclick="guess()" style="background-color: gray;border: 5px inset gold;color: black;">Guess Nigeria's age</button>
-    </div>
-
-
-
-      <script>
-         let secretno= Math.trunc(Math.random() *20)+ 1;
-           console.log(secretno);
-           let score=20;
-           let Highest=0;
-
-           document.getElementById('mama').style.display='none'
-
-
-
-           function scoreline(){
-            score=score-4;
-            if(score === 0){
-                document.getElementById('body').style.backgroundColor='red';
-                document.getElementById('tem').innerHTML='Game Over!! refresh page to start a new game';
-                document.getElementById('baba').innerHTML='GAME OVER';
-                document.getElementById('baba').style.backgroundColor='white';
-                document.getElementById('baba').style.color='red';
-                document.getElementById('mama').style.display='inline-block';
-                document.getElementById('baba').style.display='none';
-
+        .blader{
+                display: flex;
+                flex-direction: row;
                 
-                
-            }
-           }
-
-           mama.addEventListener('click',()=>{
-            secretno= Math.trunc(Math.random() *20)+ 1;
-            let score=20;
-           let Highest=0;
-            document.getElementById('body').style.backgroundColor='black';
-            document.getElementById('baba').style.display='inline-block';
-            document.getElementById('mama').style.display='none';
-            document.getElementById('baba').innerHTML='Check';
-            document.getElementById('baba').padding='7px';
-            document.getElementById('baba').style.color='black';
-            document.getElementById('tem').innerHTML='The number is??';
-            document.getElementById('fag').textContent='Start Guessing';
-            fag.style.color='blue';
-            
-             scoreline();
-             if(score>Highest){
-                document.getElementById('hs').innerHTML=`Highest score:${score}`
-             }
-            
-
-             
-           })
-
-
-        baba.addEventListener('click',()=>{
-            let a=Number( document.getElementById('yoyo').value);
-            
-           
-
-            if(a<1 || a>20 || isNaN(a)){
-                document.getElementById('fag').innerHTML='Make sure You enter a VALID number from 1 to 20'
-                document.getElementById('fag').style.color='red'
-                scoreline()
-            }else if(a>secretno){
-                document.getElementById('fag').innerHTML='The guess is too high'
-                document.getElementById('fag').style.color='red'
-
-                scoreline()
-            }else if(a<secretno){
-                document.getElementById('fag').innerHTML='The guess is too low'
-                document.getElementById('fag').style.color='red'
-                scoreline()
-            }else if(a == secretno){
-                document.getElementById('fag').innerHTML='Correct';
-                document.getElementById('fag').style.color='white';
-                document.getElementById('fag').style.fontSize='20px';
-                document.getElementById('body').style.backgroundColor='green';
-                document.getElementById('baba').style.color='green';
-                document.getElementById('tem').innerHTML='Play again??';
-                document.getElementById('mama').style.display='inline-block';
-                document.getElementById('baba').style.display='none';
-                document.getElementById('yoyo').value=`Your score is: ${score}`
-                // if (score>Highest){
-                // document.getElementById('hs').innerHTML=`Highest Score: ${score}`;
-                // }
-
-            }
-
-        })   
-        function guess(){
-                let q= prompt('How old is Nigeria');
-                switch(+q){
-                  case 60:alert('it is more than that')
-                  break;
-                  case 62:alert('Almost there')
-                  break;
-                  case 65:alert('it is not up to that')
-                  break;
-                  case 63:alert('Correct! good job keep it up')
-                  break;
-                  default:alert('You are wrong')
-
-                }
               }
 
+      @media screen and (max-width:768px){
+
+        .made{
+              display: flex;
+              flex-direction: column;
+
+              }
+              .shala{
+                  width:90%;
+                  height:400px;
+              }
+              #carouselExampleCaptions{
+                  width: 98%;
+                  height:300px;
+              }
+              .carousel slide{
+                  width:80%;
+              }
+              .male{
+                  padding-bottom:30px;
+                  
+              }
+              .blader{
+                display: flex;
+                flex-direction: column;
+              }
+              .gaab{
+                width: 97%;
+              }
+      }  
+    </style>
+</head>
+<body>
+  <nav id="navbar-example2" class="navbar bg-body-tertiary px-3 mb-3" style="position: sticky;top: 0px;">
+    <a class="navbar-brand" href="#"><i style="font-weight: bolder;font-size: 30px;color: #0d6efd;">JAVA</i></a>
+    <ul class="nav nav-pills">
+      <li class="nav-item">
+        <a class="nav-link" href="#scrollspyHeading1">History</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#scrollspyHeading2">FAQ</a>
+      </li>
+      <li>
+        <a class="nav-link" href="todo.html">TO do list</a>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Dropdown</a>
+        <ul class="dropdown-menu">
+          <li><a class="dropdown-item" href="index.html">Guess my Number</a></li>
+          <li><a class="dropdown-item" href="loan.html">Calculators</a></li>
+          <li><hr class="dropdown-divider"></li>
+          <li><a class="dropdown-item" href="sade.html">Destructuring</a></li>
+          <li><a class="dropdown-item" href="hotel.html">Hotel Booking</a></li>
+          <li><a class="dropdown-item" href="uber.html">Uber</a></li>
+          <li><a class="dropdown-item" href="todo.html">To Do List</a></li>
+        </ul>
+      </li>
+    </ul>
+  </nav>
+  <div data-bs-spy="scroll" data-bs-target="#navbar-example2" data-bs-root-margin="0px 0px -40%" data-bs-smooth-scroll="true" class="scrollspy-example rounded-2" tabindex="0">
+    <h4 id="scrollspyHeading1"><i> Brief History of javascript </i></h4>
+    <p >
+      <div class="paul">
+          <div>
+            <h1 >JavaScript / ECMAScript </h1>
+                  <p>
+                    <h4>INTRODUCTION</h4>
+                  JavaScript was invented by Brendan Eich in 1995.<br>
+
+                It was developed for Netscape 2, and became the 
+                ECMA-262 standard in 1997.<br>
+
+                After Netscape handed JavaScript over to ECMA, the Mozilla <br>
+                foundation continued to develop avaScript for the Firefox browser.<br>
+                Mozilla's latest version was 1.8.5. (Identical to ES5).<br>
+
+                Internet Explorer (IE4) was the first browser to support
+                 ECMA-262 Edition 1 (ES1).<br>
+                <br>
+
+                Year	ECMA	Browser<br>
+                1995	 	JavaScript was invented by Brendan Eich<br>
+                1996	 	Netscape 2 was released with JavaScript 1.0<br>
+                1997	 	JavaScript became an ECMA standard (ECMA-262)<br>
+                1997	ES1	ECMAScript 1 was released<br>
+                1997	ES1	IE 4 was the first browser to support ES1<br>
+                1998	ES2	ECMAScript 2 was released<br>
+                1998	 	Netscape 42 was released with JavaScript 1.3<br>
+                1999	ES2	IE 5 was the first browser to support ES2<br>
+                1999	ES3	ECMAScript 3 was released<br>
+                2000	ES3	IE 5.5 was the first browser to support ES3<br>
+                2000	 	Netscape 62 was released with JavaScript 1.5<br>
+                2000	 	Firefox 1 was released with JavaScript 1.5<br>
+                2008	ES4	ECMAScript 4 was abandoned<br>
+                2009	ES5	ECMAScript 5 was released<br>
+                2011	ES5	IE 9 was the first browser to support ES5 *<br>
+                2011	ES5	Firefox 4 was released with JavaScript 1.8.5<br>
+          </div>
 
 
-      </script>
+              <div class="eli">
+                <p>
+                2012	ES5	Full support for ES5 in Safari 6 <br>
+                <br>
+                2012	ES5	Full support for ES5 in IE 10<br>
+                <br>
+                2012	ES5	Full support for ES5 in Chrome 23<br>
+                <br>
+                2013	ES5	Full support for ES5 in Firefox 21<br>
+                
+                2013	ES5	Full support for ES5 in Opera 15<br>
+                <br>
+                2014	ES5	Full support for ES5 in all browsers<br>
+                <br>
+                2015	ES6	ECMAScript 6 was released<br>
+                <br>
+                2016	ES6	Full support for ES6 in Chrome 51<br>
+                <br>
+                2016	ES6	Full support for ES6 in Opera 38<br>
+                <br>
+                2016	ES6	Full support for ES6 in Safari 10<br>
+                <br>
+                2017	ES6	Full support for ES6 in Firefox 54<br>
+                <br>
+                2017	ES6	Full support for ES6 in Edge 15<br>
+                <br>
+                  2018	ES6	Full support for ES6 in all browsers **
+              </div> 
+      </div>           
+    </p>        
+     
+    
+    <h4 id="scrollspyHeading2">Frequently Asaked Questions</h4>
+    <p>
+      <div class="accordion" id="parentdiv">
+         <div class="accordion-item">
+            <h2 class="accordion-header">
+                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#first" style="background:black ;color: white;font-size: 20px;font-weight: bold;"> 
+                  Differences between JAVA and JAVASCRIPT
+                 </button>
+            </h2>
+            <div class="accordion-collapse collapse" id="first" data-bs-parent="#parentdiv">
+               <div class="accordion-body"  id="ja">
+                    <div>
+                      <table style="margin-left: 40px;">
+                        <th>  DIFFERENCES BETWEEN JAVA & JAVASCRIPT</th>
+                        <tr>
+                          <td> <h4>Java</h4></td>
+                          <td> <h4>Javascript</h4></td>
+                        </tr>
+                        <tr>
+                          <td> Java is an object-based programming language</td>
+                          <td>JavaScript is an OOP (object-oriented program)</td>
+                        </tr>
+                        <tr>
+                          <td>JavaScript is more commonly used in web <br>applications like browsers</td>
+                          <td>Java is more widely used in app development, smart devices<br> and back-end applications</td>
+                        </tr>
+                      </table>
+                    </div>
+  
+  
+                      <div style="margin-left: 80px;">
+                      <h4>WHO uses JavaScript?</h4>
+                          <ul>
+                            <li>Mobile App developer</li>
+                            <li>Web developer</li>
+                            <li>UI/UX Engenieer</li>
+                            <li>Desktop</li>
+                            <li>Software developer</li>
+                        </ul>
+                    </div>
+    
+                </div>
+            </div>
+          </div>
+  
+  
+         
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#second" style="background:black ;color: white;font-size: 20px;font-weight: bold;">Examples on how javascript works</button>
+            </h2>
+            <div class="accordion-collapse collapse" id="second" data-bs-parent="#parentdiv">
+              <div class="accordion-body"  id="sa">
+                <div style="color: black;margin-right: 40px;width: 300px;height: 200px;border: 5px inset black;">
+                  <h3>NOTIFICATION!</h3>
+                  <button onclick="monday()" class="bam">click</button>
+                  </div>
+                      <div style="width: 300px;height: 200px;border: 5px inset black;">
+                        <h4 id="demo"> About monday<br>
+                          Monday is the first day of the week,<br>
+                          a day to work hard for success</h4>
+                       <button class="mon" onclick="document.getElementById('demo').innerHTML='A good monday gives a good week assurance'">know more</button>
+                     </div>
+              </div>
+            </div>
+          </div>  
+          
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#fourth" style="background:black ;color: white;font-size: 20px;font-weight: bold;">Reason why we use javascript</button>
+            </h2>
+            <div class="accordion-collapse collapse" id="fourth" data-bs-parent="#parentdiv">
+              <div class="accordion-body" >
+                <!--purpose or reaseon-->
+                JavaScript allows you to create highly responsive interfaces that improve the user experience
+                and provide dynamic functionality, 
+                without having to wait for the server to react and show another page.
+              </div>
+  
+          </div>
+    
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#third" style="background:black ;color: white;font-size: 20px;font-weight: bold;">How javascript works</button>
+            </h2>
+            <div class="accordion-collapse collapse" id="third" data-bs-parent="#parentdiv">
+              <div class="accordion-body" >
+                How does JavaScript work? JavaScript is considered a client-side scripting language,
+                which means that it operates on the user's browser and does not function on an external device. An example of a language that is not client-side would be MySQL,
+                a server-side language that handles any database requests.
+              </div>
+          </div>
+          <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#fifth" style="background:black ;color: white;font-size: 20px;font-weight: bold;">How does javascript look like?</button>
+              </h2>
+              <div class="accordion-collapse collapse" id="fifth" data-bs-parent="#parentdiv">
+                <div class="accordion-body" >
+                  JavaScript is a lightweight, cross-platform, single-threaded, and interpreted compiled programming language.
+                  It is also known as the scripting language for webpages. It is well-known for the development of web pages,
+                  and many non-browser environments also use it.
+                </div>
+      
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#sixth" style="background:black ;color: white;font-size: 20px;font-weight: bold;"> Things You Can Do With JavaScript</button>
+              </h2>
+              <div class="accordion-collapse collapse" id="sixth" data-bs-parent="#parentdiv">
+                  <div class="accordion-body">
+                      <ul>
+                         Things You Can Do With JavaScript
+                          <li> Mobile Apps. You can use JavaScript to create mobile applications. ...</li>
+                          <li> Front-end Web Development. ...</li>
+                          <li> Back-end Web Development. ...</li>
+                          <li> JavaScript as a Serverless Computing Programming Langauge. ...</li>
+                          <li> Desktop Applications. ...</li>
+                          <li> Game Development. ...</li>
+                          <li> Artificial Intelligence. ...</li>
+                          <li>You can write plugins for popular applications.</li>
+                      </ul>
+                     
+                  </div>
+                
+                </div>
+    
+             </div>
+             
+             <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#seventh" style="background:black ;color: white;font-size: 20px;font-weight: bold;">Difference between comparison operators and logical operators</button>
+              </h2>
+              <div class="accordion-collapse collapse" id="seventh" data-bs-parent="#parentdiv">
+                <div class="accordion-body" >
+                  <table>
+                    <th>Differences between comparison operators and logical operators</th>
+                    <tr>
+                      <td>comparison operators</td>
+                      <td>Logical operators</td>
+                    </tr>
+                    <tr>
+                      <td>comparison operators are operators that compares<br>
+                      values and return <strong>True or false</strong>
+                      </td>
+                      <td>Logical operators are operators that combine<br> multiple boolean expressions or values and provide a single<br>
+                      boolean output </td>
+                    </tr>
+                  </table>
+                   <strong> !=</strong> will only check value regardless of operands type<br>
+                  <strong>!==</strong> will comapare the operands considering the value and type of operands
+                  <br>
+                  <strong>!</strong> it reverses the aruguement
+                  <br><br>
+                  <strong>TEN RESERVED WORDS IN JAVASCRIPT</strong>
+                  <ul>
+                    <li>Date</li>
+                      <li>eval</li>
+                      <li>function</li>
+                      <li> Infinity</li>
+                  <li>isFinite	</li>
+                  <li>isNaN</li>
+                <li>isPrototypeOf</li>	
+                <li>length</li>
+                <li>NaN</li>	
+                <li> name</li>	
+               <li>	Number	</li>
+               <li>Object	</li>
+               <li>prototype</li>
+                   <li>String</li>	
+                   <li>toString</li>
+                </ul>
+                   <strong>Event handelers</strong>
+                   <p>meaning:Event handlers can be used to handle and verify user input, user actions, and browser actions: 
+                    Things that should be done every time a page loads. Things that should be done when the page is closed. 
+                    Action that should be performed when a user clicks a button.</p>
+                  <ul>
+                      <li>  onchange	An HTML element has been changed</li>
+                      <li> onclick	    The user clicks an HTML element</li>
+                      <li> onmouseover 	The user moves the mouse over an HTML element</li>
+                    <li> onmouseout	  The user moves the mouse away from an HTML element</li>
+                    <li> onkeydown	  The user pushes a keyboard key</li>
+                    <li> onload	    The browser has finished loading the page</li>
+                 </ul>
+  
+                </div>
+              </div>
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#eight" style="background:black ;color: white;font-size: 20px;font-weight: bold;">Quiz</button>
+                  </h2>
+                  <div class="accordion-collapse collapse" id="eight" data-bs-parent="#parentdiv">
+                    <div class="accordion-body"  style="background-color: black;box-shadow: 5px 5px 5px 2px white;">
+                    <div style="border: 2px groove lightslategray;padding: 15px;color: white;width: 300px;">
+                      <h4><i> Can you guess Nigeria age??</i></h4><br><br><br>
+                      <button onclick="guess()" style="background-color: green;border: 5px inset white;">Guess Nigeria's age</button>
+                    </div> 
+
+                      <button onclick="ife()" style="background-color: pink;border: 5px groove grey;">My bio</button>
+                     
+                      <button onclick="greet()" style="background-color: black;border: 5px groove gray;color: white;padding: 4px;">Time for Prayer</button>
+                     <button id="sade">Age of retirement</button>
+                    </div>
+        
+                </div>
+               
+    
+        </div></p>
+        <br><br>
+        
+
+        
+
+
+       <script>
+
+
+            let p= new Date().getHours();
+
+            function greet(){
+              let time= new Date().getHours();
+              if(time == 6 ){
+                  alert('Go and pray subuhi')
+              }else if(time == 14 ){
+                  alert('Go and pray zuhr')
+              }else if(time == 17){
+                  alert('Good evening, go and pray ashri')
+              }else if(time == 19){
+                alert('Go and pray moghrib')
+              }else if(time == 20){
+                  alert('Go and pray ishai')
+              }
+            }
+
+
+              let a= new Date().getDay();
+              let b= ['sunday', 'monday','tuesday','wednesday','thursday','friday','saturday']
+              alert( `Today is ${b[a]}`)
+
+              let myname = prompt('Hi visitor, What is your name? ')
+              let myvariable= `Welcome to my page ${myname}`
+                alert(myvariable)
+            function ife(){
+              const about={
+              name:'Olatunde Ifeoluwa',
+              gender:'girl',
+              tribe:'yoruba',
+              age:'16 yrs old',
+              location:'ojoo Ibadan',
+              food:'fried yam',
+              height:'5ft',
+              town:'Oyo state',
+              }
+
+              alert(`My name is ${about.name}, I am  a ${about.age} ${about.tribe} ${about.gender} . I am from  ${about.town} and I live in ${about.location}`)
+            }
+              function guess(){
+            let q= prompt('How old is Nigeria');
+            switch(+q){
+              case 60:alert('it is more than that')
+              break;
+              case 62:alert('Almost there')
+              break;
+              case 65:alert('it is not up to that')
+              break;
+              case 63:alert('Correct! good job keep it up')
+              break;
+              default:alert('You are wrong')
+
+            }
+            }
+            let calAgeofretirment= (name, birthyear, retirmentage) =>{
+            const age= new Date().getFullYear()-birthyear;
+            const yearsleft= retirmentage-age;
+            return `${name},you are due to retire in ${yearsleft}year(s)time`
+
+            }
+            console.log(calAgeofretirment('fogo',1997,60));
+            // sade.addEventlistener('click',()=>{
+            // alert(calAgeofretirment('don',1995,55))
+            // })
+
+    
+
+         
+
+       </script>
 </body>
 </html>
