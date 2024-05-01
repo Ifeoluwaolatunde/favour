@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+    </head>
+    <body>
+        <h1 id="lala">hjkl</h1>
+        <br><br>
+        <h2 id="cici"></h2>
+
+
+        <script>
+          let counting= function(){
+             let mbday=new Date('April 26,2024 10:50:00').getTime();
+
+             let originaldate= new Date().getTime();
+             let daysbtw= mbday - originaldate;
+
+             let days= Math.floor(daysbtw/ (1000*60*60*24));
+             let hours= Math.floor( daysbtw%(1000*60*60*24) / (1000*60*60));
+             let minutes= Math.floor( daysbtw%(1000*60*60) /(1000*60));
+             let seconds =Math.floor(daysbtw%(1000*60)/(1000));
+
+             days=(days<10)? '0'+days:days;
+             hours=(hours<10)? '0'+hours: hours;
+             minutes =(minutes<10)? '0'+hours:hours;
+             seconds=(seconds<10)? '0'+seconds:seconds;
+
+             document.getElementById('lala').innerHTML=`Next Two Days is in ${days}D: ${hours}H: ${minutes}M:${seconds}S. `
+            if( daysbtw<=0){
+                clearInterval(x);
+                document.getElementById('lala').innerHTML=`BYE BYE`
+
+            }
+          }
+           let x=setInterval(counting,1000)
+
+
+
+        function now(){
+         let mytime= new Date();
+         let hh=mytime.getHours();
+         let mm=mytime.getMinutes();
+         let ss=mytime.getSeconds();
+         let session='AM'
+         
+         if(hh==0){
+            hh=12;
+         }
+         if(hh>12){
+            hh=hh-12;
+            session='PM'
+         }
+
+
+         hh=(hh<10)? '0'+hh:hh;
+         mm=(mm<10)? '0'+mm:mm;
+         ss=(ss<10)? '0'+ss:ss;
+
+
+
+
+         document.getElementById('cici').innerHTML=`${hh}: ${mm} :${ss} ${session}`
+
+        }
+        setInterval(now,1000)
+        
+
+
+
+
+        </script>
+
+
+    </body>
+</html>

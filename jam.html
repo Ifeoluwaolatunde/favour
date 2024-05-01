@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+
+        </title>
+        <style>
+            #fag{
+                padding: 30px;
+                margin: 0px auto;
+                box-shadow: 0px 0px 3px 5px grey;
+                width: 300px;
+                height: 250px;
+                border-radius: 5px;
+            }
+            #shi{
+                width: 200px;
+                padding: 10px;
+             box-shadow: 5px 5px 2px 5px grey;  
+             outline: 2px groove gray;
+             border-radius: 10px;
+            }
+            #ife{
+                width: 200px;
+                padding: 10px;
+                background-color: green;
+                color: white;
+                font-weight: bold;
+                border-radius: 10px;
+                outline: none;
+            }
+            #mide{
+                width: 95%;
+                display: flex;
+                flex-direction: row;
+                height: 95%;
+                padding: 20px;
+            }
+            #side{
+                box-shadow: 5px 5px 2px 5px grey;
+                width: 400px;
+                height: 400px;
+                padding: 15px;
+            }
+
+        </style>
+    </head>
+
+
+    <body>
+    <div id="fag">
+       <input type="text" id="shi" placeholder="Input your reg number ->">
+       <br>
+       <br>
+       <button id="ife" onclick="cik()">Login</button>
+    </div>
+
+
+    <div id="mide">
+
+        <!-- sdfghjklugfcvn -->
+        <div id="side">
+            <h4>Profile picture</h4>
+            <br>
+            <button style="width: 70px;height: 70px;background-color: black;color: grey;">
+              User
+            </button>
+            <br>
+            <h3><strong>
+                <ul style="display: flex;flex-direction: column;">
+                    <li>English</li>
+                    <li>Biology</li>
+                    <li>Chemistry</li>
+                    <li>Physics</li>
+                </ul>
+            </strong></h3>
+            Date:April 24 2024
+            <br>
+            Venue: God Sent Center 2,Apata, <br>
+            Ibadan,Oyo state.
+            
+
+        </div>
+          <!-- sdfghjklugfcvn -->
+
+        <div id="side">
+            <p>Welcome User</p>
+            <h4>Your subject combination are:</h4>
+            <ul>
+                <li><strong>English with 40 questions</strong></li>
+                <li><strong>Biology with 20 questions</strong></li>
+                <li><strong>Chemistry with 20 questions</strong></li>
+                <li><strong> Physics with 20 questions</strong> </li>
+            </ul>
+            <br>
+            <button style="background-color: greeen;color: white;padding: 10px;width: 100px;">
+                START</button>
+
+        </div>
+         <!-- sdfghjklugfcvn -->
+
+        <div id="side">
+            <h3>INSTRUCTIONS</h3>
+
+            <h4><strong>Note:</strong>Do not click on the start button until you are asked to do so</h4>
+             <ul>
+                <li>Click on "A" if your answer is A</li>
+                <li>Click on "B" if your answer is B</li>
+                <li>Click on "C" if your answer is C</li>
+                <li>Click on "D" if your answer is D</li>
+                <li>Click on "N" or "<" to go to the next question</li>
+                <li>Click on "P" or ">" to go to the previous question</li>
+                <li>Click on "S" to submit</li>
+             </ul>
+        </div>
+         <!-- sdfghjklugfcvn -->
+
+
+    </div>
+
+
+
+        
+        <script>
+            document.getElementById('mide').style.display='none'
+          function cik(){
+            document.getElementById('fag').style.display='none'
+            document.getElementById('mide').style.display='flex'
+          }
+
+
+
+
+        </script>
+
+
+
+    </body>
+</html>

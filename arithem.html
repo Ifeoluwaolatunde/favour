@@ -12,30 +12,94 @@
     </style>
 </head>
 <body>
-    <input type="number" value="what is the time" id="goody">
-  <button onclick="greet()" >Greet</button>
-  
+    <!-- <input type="number" value="what is the time" id="goody">
+  <button onclick="greet()" >Greet</button> -->
+      <!-- <input type="text" id="kola">
+      <button onclick="kiki()">Submit</button>
+      <p id="kisha"></p>
+      <p>
+        1. /^[A-Z]+$
+        2./^[a-zA-Z]
+        3./^\w+@[a-z]+\.[a-z]{2,3}$/
+
+      </p>
+       -->
+      <input type="text" id="bola">
+      <button onclick="biki()">Submit</button>
+      <p id="bisha"></p>
 
     <script>
-        let p= new Date().getHours();
 
-      function greet(){
-        let time= new Date().getHours();
-        if(time>0 && time<12){
-            alert('Good morning')
-        }else if(time>12 && time<15 ){
-            alert('Good afternoon')
-        }else if(time>15 && time<23){
-            alert('Good evening')
+
+
+      // function kiki(){
+      //  let userage= document.getElementById('kola').value;
+      // let kate = document.querySelector('#kisha')
+      
+      // if(userage==''){
+      //   kate.innerHTML="Pls put a valid input";
+      //   kate.style.color='red';
+      //  }else if(isNaN(userage)){
+      //   kate.innerHTML= "invalid input"
+      //   kate.style.color='blue'
+      //  }
+      //   else{
+      //   kate.innerHTML="Correct input";
+      //   kate.style.color='green';
+      // }
+  
+      // }
+
+       
+          // REG EXPRESSION
+       
+      function biki(){
+        let bal=document.getElementById('bola').value;
+        let reg=/^\w+@[a-z]+\.[a-z]{2,3}$/ ;
+        let minvalue=5;
+        let maxvalue=15;
+        let jiji;
+        
+        if(bal==''){
+          jiji.innerHTML=`pls do not leave it empty`
+        }else if(bal.length<minvalue || bal.length>maxvalue ){
+          jiji.innerHTML=`pls ensure ur username is not less than ${minvalue} nd not more than ${maxvalue}`
+        }else if(!bal.match(reg)){
+          jiji.innerHTML='Ensure ur input has letters and numbers'
         }
+        else{
+          jiji.innerHTML='Correct input'
+          jiji.style.color='green'
+        }
+        document.querySelector('#bisha').innerHTML=jiji;
+      }
+       
 
-      }
-      let q= prompt('how old is U.I');
-      switch(a){
-        case 18:aalert('u are low')
-        brake;
-        case 20:
-      }
+
+      // else if( username.length<5 || usrername.length>17)
+        // jaja.innerHTML=" your username must not be more dan 5 or less dan 17"
+
+
+
+      //   let p= new Date().getHours();
+
+      // function greet(){
+      //   let time= new Date().getHours();
+      //   if(time>0 && time<12){
+      //       alert('Good morning')
+      //   }else if(time>12 && time<15 ){
+      //       alert('Good afternoon')
+      //   }else if(time>15 && time<23){
+      //       alert('Good evening')
+      //   }
+
+      // }
+      // let q= prompt('how old is U.I');
+      // switch(a){
+      //   case 18:aalert('u are low')
+      //   brake;
+      //   case 20:
+      // }
 
 
        /* let rokeebage = prompt('how old are you')
@@ -93,9 +157,9 @@
     let dc= 6;
     alert(ab< 20 && dc>7)*/
 
-    let a= prompt('how old are u')
-    let b= (a>= 18)? 'apply' : 'go back to school';
-    alert(b)
+    // let a= prompt('how old are u')
+    // let b= (a>= 18)? 'apply' : 'go back to school';
+    // alert(b)
   
 
 

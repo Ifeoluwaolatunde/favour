@@ -36,8 +36,9 @@
           let mins= Math.floor((cal% (60*60*1000))/(60*1000))
           let secs= Math.floor((cal% (60*1000))/(1000))
           document.getElementById('ola').innerHTML=`${days}DAYS , ${hours}HRS ,${mins}MINS and ${secs} to APRIL 9 !!!!`
-          if(days==0){
-            clearInterval(lolo)
+          if(cal==0){
+            clearInterval(lolo);
+            document.getElementById('ola').innerHTML=`Bye bye`
           }
          }
 

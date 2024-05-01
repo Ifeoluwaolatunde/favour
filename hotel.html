@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="bootstrap-5.3.1-dist/css/bootstrap.min.css">
     <style>
         body{
-            background-image: url(hotelp.png);
+            background-image: url(bike.jpg);
             background-attachment: relative;
             background-size: cover;
             
@@ -23,10 +23,109 @@
             width: 600px;
             height: 600px;
         }
-        .made{
-            display: flex;
-            flex-direction: row;
+        #la{
+            width: 300px;
+                padding: 10px;
+                border-radius: 10px;
+                box-shadow: 0px 0px 2px 5px grey;
         }
+        #laj{
+            width: 300px;
+                padding: 10px;
+                border-radius: 10px;
+                box-shadow: 0px 0px 2px 5px grey;
+        }
+        #bk:hover{
+            background-color: red;
+            font-weight: bolder;
+            margin-left: 2px;
+
+        }
+        
+        #didi{
+                background-color: rgba(49, 48, 46, 0.9);
+                margin: 0px auto;
+                width: 60%;
+                height: 600px;
+                /* box-shadow: 0px 5px 2px 7px rgba(255, 255, 255, 0.5); */
+                padding: 17px;
+                border-radius: 10px;
+            }
+        #roomtype{
+                background-color: rgba(49, 48, 46, 0.5);
+                color: white;
+                margin: 0px auto;
+                width: 60%;
+                height: 600px;
+                /* box-shadow: 0px 5px 2px 7px rgba(255, 255, 255, 0.5); */
+                padding: 17px;
+                border-radius: 10px;
+                margin-left: 300px;
+            }
+
+            
+            #bas{
+                width: 300px;
+                padding: 10px;
+                border-radius: 10px;
+                box-shadow: 0px 0px 2px 5px grey;
+            }
+            #bas:hover{
+                width: 300px;
+                padding: 10px;
+                border-radius: 10px;
+                box-shadow: 0px 0px 2px 5px grey;
+                outline:blue ;
+            }
+            #bac{
+                width: 150px;
+                padding: 10px;
+                box-shadow: 0px 0px 5px grey;
+                border-radius: 10px;
+            }
+            #bic{
+                width: 150px;
+                padding: 10px;
+                box-shadow: 0px 0px 5px grey; 
+                border-radius: 10px;
+            }
+            #bad{
+                width: 300px;
+                padding: 10px;
+                border-radius: 10px;
+                box-shadow: 0px 0px 2px 5px grey; 
+            }
+            #bad:hover{
+                width: 300px;
+                padding: 10px;
+                border-radius: 10px;
+                box-shadow: 0px 0px 2px 5px grey;
+                outline:blue ;
+            }
+            #state{
+                width: 150px;
+                padding: 10px;
+                box-shadow: 0px 0px 5px grey; 
+                border-radius: 10px; 
+            }
+            #city{
+                width: 150px;
+                padding: 10px;
+                box-shadow: 0px 0px 5px grey; 
+                border-radius: 10px;  
+            }
+            #dat{
+                width: 150px;
+                padding: 10px;
+                box-shadow: 0px 0px 5px grey; 
+                border-radius: 10px;   
+            }
+            #det{
+                width: 150px;
+                padding: 10px;
+                box-shadow: 0px 0px 5px grey; 
+                border-radius: 10px;  
+            }
 
         @media screen and (max-width:768px){
             body{
@@ -49,18 +148,84 @@
                 height:300px;
             }
             .carousel slide{
-                width:80%;
+                width:100%;
             }
             .male{
                 padding-bottom:30px;
                 margin: 0px auto;
+            }
+            #jiji{
+                color: black;
+                
+            }
+            #didi{
+                background-color: rgba(46, 26, 1, 0.9);
+                margin: 0px auto;
+                width: 95%;
+                height: 800px;
+                /* box-shadow: 0px 5px 2px 7px rgba(255, 255, 255, 0.5); */
+                padding: 17px;
+                border-radius: 10px;
+            }
+
+            #bas{
+                width: 150px;
+                padding: 10px;
+                border-radius: 10px;
+                box-shadow: 0px 0px 2px 5px grey;
+            }
+            #bas:hover{
+                width: 150px;
+                padding: 10px;
+                border-radius: 10px;
+                box-shadow: 0px 0px 2px 5px grey;
+                outline:blue ;
+            }
+            #bac{
+                width: 150px;
+                padding: 10px;
+                box-shadow: 0px 0px 5px grey;
+                border-radius: 10px;
+            }
+            #bic{
+                width: 150px;
+                padding: 10px;
+                box-shadow: 0px 0px 5px grey; 
+                border-radius: 10px;
+            }
+            #bad{
+                width: 150px;
+                padding: 10px;
+                border-radius: 10px;
+                box-shadow: 0px 0px 2px 5px grey; 
+            }
+            #bad:hover{
+                width: 150px;
+                padding: 10px;
+                border-radius: 10px;
+                box-shadow: 0px 0px 2px 5px grey;
+                outline:blue ;
+            }
+            #shi{
+                display: none;
+            }
+            #roomtype{
+                background-color: rgba(46, 26, 1, 0.9);
+                color: white;
+                margin: 0px auto;
+                width: 95%;
+                height: 800px;
+                /* box-shadow: 0px 5px 2px 7px rgba(255, 255, 255, 0.5); */
+                padding: 17px;
+                border-radius: 10px;
+                margin-left: 0px;
             }
         }
     </style>
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg bg-body-tertiary" style="color:black;position: sticky;">
+    <nav class="navbar navbar-expand-lg bg-body-pink" style="color:white ;position: sticky;">
         <div class="container-fluid">
           <a class="navbar-brand" href="#"><i style="font-weight: bolder;">ROYAL HOTEL..</i></a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#OLA" aria-controls="navbarSupportedContent">
@@ -68,49 +233,71 @@
           </button>
           <div class="collapse navbar-collapse" id="OLA">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-              <li class="nav-item">
-                <a class="nav-link active"  href="index.html"><strong> Guess my num </strong></a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="brief.html">History of javascript</a>
-              </li>
-              <li class="nav-item"><a  href="sade.html" style="color: black;text-decoration: none;font-weight: bold;margin-right: 5px;">Destructuring</a></li>
-             <li class="nav-item"><a  href="loan.html" style="color: black;text-decoration: none;font-weight: bold;">Calculators</a></li>
+              <li class="nav-item"><a class="nav-link active"style="color: black;text-decoration: none;font-weight: bold;"  href="index.html"><strong> Guess my num </strong></a></li>
+              <li class="nav-item"> <a class="nav-link" style="color: black;text-decoration: none;font-weight: bold;" href="brief.html">History of javascript</a></li>
+              <li class="nav-item"><a class="nav-link" href="sade.html" style="color: black;text-decoration: none;font-weight: bold;margin-right: 5px;">Destructuring</a></li>
+             <li class="nav-item"><a class="nav-link" href="loan.html" style="color: black;text-decoration: none;font-weight: bold;">Calculators</a></li>
               
               
           </div>
         </div>
       </nav>
 
-   <div style="text-align: center;">
-        <h2>Welcome to Royal Hotel</h2>
-        <h4><i> Your satisfaction is our priority ....</i></h4><br><br>
+   
+
+ 
+
+
+    <div style="background-color: rgba(0, 0,0, 0.5);color: white;" id="didi"> 
+
+
+        <h1 id="jiji"><i>ROYAL HOTEL BOOKING FORM</i></h1>
+            <form action="">
+                  <strong>Full Name..</strong><input type="text" id="bas">
+                    <br><br id="shi"><br id="shi">
+                   <span> <strong>Email</strong><input type="text" id="bac"> <strong>Number</strong><input type="number" id="bic"> </span>
+                    <br><br id="shi"><br id="shi">
+                    <strong>Address</strong> <input type="text" name="" id="bad">
+                    <br><br id="shi"><br id="shi">
+                 <span><strong>State</strong>  <input type=" text" id="state">  <strong>City</strong><input type="text" id="city"></span> 
+                    <br><br id="shi"><br id="shi">
+                   <span>  <strong>Check in</strong> <input type="date" id="dat"> <strong> Number of guest</strong><input type="number" id="det"></span>
+                   <br><br id="shi">
+
+                    <label for="accotype">Select Accommodation</label>
+                <select  id="accotype">
+                    <option value="opt" disabled>Select your choice</option>
+                    <option value="opt1">Public Accommodation</option>
+                    <option value="opt2">Hotel Accommodation</option>
+                    </select>
+            </form>   
     </div>    
-      <h5>Please select a suitable Accommodation for youself</h5>
-
-  <div class="made">
-
-
-    <div style="background-color: rgba(0, 0,0, 0.5);color: white;" class="male"> 
-        <h2><i>ACCOMMODATION</i></h2>
-            <label for="accotype">Select Accommodation</label>
-          <select  id="accotype">
-            <option value="opt" disabled>Select your choice</option>
-            <option value="opt1">Public Accommodation</option>
-            <option value="opt2">Hotel Accommodation</option>
-            </select>
+            
             <div id="roomtype" style="display: none;" >
+                <h1> <i>Welcome
+                    <span id="temi"></span>
+                </i>.
+                </h1>
+                <p style="font-family: cursive;"><h4 style="margin-left: 5px;">We warmly welcome you <span id="temi"></span> as our valued guest.
+                    We are thrilled to have you stay with us and trust that your time here will be enjoyable and comfortable
+                    <p>
+                        Should you require any assistance during your stay, please do not hesitate to contact our friendly
+                        professional staff, who are available 24/7.
+                    </p>
+                   </h4>
+                </p>
                 
                 <input type="text" placeholder="pls input number of days" id="la"><br>
+                <br>
                 <label for="rooms">Select Room Type</label>
                 <select id="rooms" >
-                    <option value="val1">Comfort Zone N15000</option>
+                    <option value="val1" class="laj">Comfort Zone N15000</option>
                     <option value="val2">Rose Double N30000</option>
                     <option value="val3">Exclusive offer N45000</option>
                 </select><br>
                 <span id="pay" style="display:none;"></span><br>
                 
-                <button onclick="countdown()" style="padding: 7px;border-radius: 10px;width: 160px;">Book Now</button>
+                <button onclick="countdown()" style="padding: 7px;border-radius: 10px;width: 160px;" id="bk">Book Now</button>
                 <br>
                <h1> <span id="sha"></span></h1>
                <br><br><br>
@@ -118,10 +305,10 @@
 
 
             </div>   
-     </div>
+    
 
 
-            <div>
+            <!-- <div>
                <div class="shala">
                 <div id="carouselExampleCaptions" class="carousel slide" style="display: none;">
                     <div class="carousel-indicators">
@@ -162,7 +349,7 @@
                     </button>
                 </div>
             </div>  
-            </div>    
+            </div>     -->
 
     
                           
@@ -179,6 +366,9 @@
        
        type1.addEventListener("click", ()=>{
            if(type1.value ==='opt2'){
+                let jiji= document.getElementById('bas').value;
+                document.getElementById('temi').innerHTML= jiji
+                   document.getElementById('didi').style.display='none'
                    document.getElementById('roomtype').style.display='inline-block';
                    document.getElementById('carouselExampleCaptions').style.display='inline-block';
            }

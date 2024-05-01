@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+
+        </title>
+        <style>
+            body{
+                background-image: url(bike.jpg);
+               background-attachment: relative;
+              background-size: cover;
+              padding-top: 30px;
+            }
+            #didi{
+                background-color: rgba(46, 26, 1, 0.9);
+                margin: 0px auto;
+                width: 60%;
+                height: 500px;
+                /* box-shadow: 0px 5px 2px 7px rgba(255, 255, 255, 0.5); */
+                padding: 17px;
+                border-radius: 10px;
+            }
+            #bas{
+                width: 300px;
+                padding: 10px;
+                border-radius: 10px;
+                box-shadow: 0px 0px 2px 5px grey;
+            }
+            #bas:hover{
+                width: 300px;
+                padding: 10px;
+                border-radius: 10px;
+                box-shadow: 0px 0px 2px 5px grey;
+                outline:blue ;
+            }
+            #bac{
+                width: 150px;
+                padding: 10px;
+                box-shadow: 0px 0px 5px grey;
+                border-radius: 10px;
+            }
+            #bic{
+                width: 150px;
+                padding: 10px;
+                box-shadow: 0px 0px 5px grey; 
+                border-radius: 10px;
+            }
+            #bad{
+                width: 300px;
+                padding: 10px;
+                border-radius: 10px;
+                box-shadow: 0px 0px 2px 5px grey; 
+            }
+            #bad:hover{
+                width: 300px;
+                padding: 10px;
+                border-radius: 10px;
+                box-shadow: 0px 0px 2px 5px grey;
+                outline:blue ;
+            }
+            #state{
+                width: 150px;
+                padding: 10px;
+                box-shadow: 0px 0px 5px grey; 
+                border-radius: 10px; 
+            }
+            #city{
+                width: 150px;
+                padding: 10px;
+                box-shadow: 0px 0px 5px grey; 
+                border-radius: 10px;  
+            }
+            #dat{
+                width: 150px;
+                padding: 10px;
+                box-shadow: 0px 0px 5px grey; 
+                border-radius: 10px;   
+            }
+            #det{
+                width: 150px;
+                padding: 10px;
+                box-shadow: 0px 0px 5px grey; 
+                border-radius: 10px;  
+            }
+            #d2{
+                margin: 0px auto;
+                width: 60%;
+                height: 500px;
+                box-shadow: 0px 5px 2px 7px grey;
+                padding: 17px;
+                display: none;
+            }
+        </style>
+    </head>
+    <body>
+
+         <div id="didi">
+            <h1 style="color: black;font-size: 40px;"><i>ROYAL HOTEL BOOKING FORM</i></h1>
+            <form action="">
+                  <strong>Full Name..</strong><input type="text" id="bas">
+                    <br><br><br>
+                   <span> <strong>Email</strong><input type="text" id="bac"> <strong>Number</strong><input type="number" id="bic"> </span>
+                    <br><br><br>
+                    <strong>Address</strong> <input type="text" name="" id="bad">
+                    <br><br><br>
+                 <span><strong>State</strong>  <input type=" text" id="state">  <strong>City</strong><input type="text" id="city"></span> 
+                    <br><br><br>
+                   <span>  <strong>Check in</strong> <input type="date" id="dat"> <strong> Number of guest</strong><input type="number" id="det"></span>
+                   <br><br>
+                   <label for="select">Room type</label>
+                   <select name="" id="types">
+                    <option value="ti" >Select your choice</option>
+                    <option value="type1">hotel</option>
+                    <option value="type2">Hotel</option>
+                   </select>
+
+            </form>
+        </div> 
+
+         <div id="d2">
+
+          
+
+
+        
+            <h1> <i>Welcome
+                <span id="temi"></span>
+            </i>.
+            </h1>
+            <p><h3>We warmly welcome you <span id="temi"></span> as our valued guest.
+                We are thrilled to have you stay with us and trust that your time here will be enjoyable and comfortable
+                <p>
+                    Should you require any assistance during your stay, please do not hesitate to contact our friendly
+                    professional staff, who are available 24/7.
+                </p>
+               </h3>
+            </p>
+               
+        </div> 
+
+        <script>
+           
+            let titi=document.querySelector('#types');
+            titi.addEventListener('click', ()=>{
+                if(titi.value='type2'){
+                    document.getElementById('didi').style.display='none';
+                    document.getElementById('d2').style.display='inline-block';
+                    let ola= document.getElementById('bac').value;
+            document.getElementById('temi').innerHTML=ola;
+                }
+                // else if(titi.value='type1'){
+
+                // }
+            })
+
+
+        </script>
+
+
+    </body>
+</html>
