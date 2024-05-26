@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+
+<style>
+  
+  .jiggy{
+    margin: 0px auto;
+    background-color: pink;
+    width:50%;
+    padding: 15px;
+  }
+  .fot{
+    font-family:'Courier New', Courier, monospace;
+    text-align: center;
+    font-size: 40px;
+    font-weight: bolder;
+  }
+  .fot:first-child{
+    color: lightcoral;
+  }
+  .fot:last-child{
+    color: lightcoral;
+  }
+  li{
+    list-style-type: circle;
+  }
+  #olu{
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 15px;
+    font-weight: bold;
+    
+  }
+  #akin{
+    padding: 8px;
+    border-radius: 5px;
+    font-size: 15px;
+    font-weight: bold;
+    width: 80px;
+  }
+  #oye{
+    padding: 8px;
+    border-radius: 5px;
+    font-size: 15px;
+    font-weight: bold;
+    width: 80px;
+  }
+  #ola{
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 15px;
+    font-weight: bold;
+  }
+  .kall{
+    padding: 20px;
+    padding-left: 40px;
+    border: 2px solid lightseagreen;
+    border-radius: 50px 20px;
+    width:400px;
+    height: 400px;
+  }
+  .bagg{
+    width: 420px;
+    border: 3px dotted lightcoral;
+    padding: 10px;
+    border-radius: 50px 20px;
+  }
+  .gaab{
+    margin: 0px auto;
+  }
+  .jiggy{
+    background-color: pink;
+    width:50%;
+    padding: 30px;
+  }
+  .bambam{
+    background-color: white;
+  }
+  #ade li{
+    text-decoration: underline;
+    list-style-type: square;
+    font-size: 20px;
+    font-weight: bold;
+    margin-right: 15px;
+  }
+  .wase{
+    word-spacing: 250px;
+  }
+  
+  #olu:hover{
+    outline: 1px solid rgb(248, 148, 165);
+  }
+  #akin:hover{
+    outline: 1px solid rgb(248, 148, 165);
+  }
+  #oye:hover{
+    outline: 1px solid rgb(248, 148, 165);
+  }
+  #ola:hover{
+    outline:1px solid rgb(248, 148, 165);
+  }
+  button:hover{
+    padding: 5px;
+    background-color: white;
+    color: pink;
+    font-weight: bolder;
+  }
+  .cc li{
+    list-style-type: none;
+   }
+   .ab button{
+    padding: 5px;
+    background-color: white;
+    color: pink;
+    font-weight: bolder;
+    text-decoration: none;
+   }
+ /* .gaab{
+    width: 450px;
+    border: 2px dashed lightpink;
+    border-radius: 20px 50px;
+    padding: 10px;
+    padding-left: 15px;
+  }*/
+  @media screen and (max-width: 768px){
+    .jiggy{
+    margin: 0px auto;
+    background-color: pink;
+    width:100%;
+    padding: 30px;
+   }
+   .cc li{
+    list-style-type: none;
+   }
+   .ab{
+    padding: 5px;
+    background-color: white;
+    color: pink;
+    font-weight: bolder;
+    text-decoration: none;
+   }
+    .wase{
+    word-spacing: 50px;
+    }
+    #olu{
+      padding: 7px;
+      border-radius: 5px;
+      width: 150px;
+    } 
+    #olu:hover{
+      outline: 1px solid rgb(248, 148, 165);
+    }
+    #ola{
+      width: 150px;
+    }
+    #ola:hover{
+      outline: 1px solid rgb(248, 148, 165);
+      
+    }
+  
+  }
+
+</style>
+<body>
+  <ul style="display: flex;flex-direction: row;" class="cc">
+    <li><button class="ab"><a href="guess.html" class="aa">History of java</a></button></li>
+    <li><button class="ab"><a href="loan.html" class="aa">Calculators</a></button></li>
+    <li><button class="ab"> <a href="sade.html" class="aa">Destructuring</a></button></li>
+    <li><button class="ab"> <a href="hotel.html" class="aa">Hotel Booking</a></button></li>
+  </ul>
+    <div class="jiggy">
+      <div>
+       
+        <div class="bambam" style=" display: flex;flex-direction: row;padding: 5px;border-radius: 10px;justify-content: center;">
+          <h1 class="fot">
+          To Do List
+          <img src="todo1.jpg" style="width: 100px;height: 100px;">
+         </h1>
+         <h4 class="das"> </h4>
+        </div> 
+        <div id="baba">
+         
+        </div>
+
+         <div class="bambam" style="padding: 20px;border-radius: 5px;">
+          <input type="text" placeholder="task" id="olu">
+          <input type="text" placeholder="time to start" id="akin">
+          <input type="text" placeholder="time to end" id="oye">
+
+
+          <button onclick="apple()" style="background-color: lightcoral;border: none;color: white;padding: 10px;border-radius: 5px;">
+          
+          Add task</button>
+          <!-- <input type="text" placeholder="minutes" id="ola">
+          <span id="tare"></span>
+          <button onclick="life()" style="background-color: lightcoral;border: none;color: white;padding: 10px;border-radius: 5px;"> Start</button>
+           <h4 class="wase"> TASK   </h4>
+           <span id="wise"></span> -->
+           <br>
+           <br>
+          <div >
+            <div >
+            <table cellspacing="0" ; cellpadding="3" border="1" width="80%"  id="jojo" >
+               <tr>
+                <td>Task </td>
+                <td>Time started</td>
+                <td>Time ended</td>
+                <td>countdown</td>
+                <td>Done</td>
+                <td>Undo</td>
+                <td>Edit</td>
+               </tr>
+            </table>
+            </div> 
+          
+          
+
+      </div>
+      <br><br><br>
+
+    </div>
+
+     
+
+
+
+     
+
+
+
+
+
+  <script>
+
+function apple() {
+    let m;
+    let d = document.createElement('tr');
+
+    let a = document.getElementById('olu').value;
+    let b = document.createTextNode(a);
+    let c = document.createElement('td');
+    c.appendChild(b);
+    d.appendChild(c);
+
+    let countdown = document.createElement('td');
+    countdown.textContent = '00:00:00';
+    startCountdown(countdown);
+    d.appendChild(countdown);
+    a.value=' '
+    function startCountdown(countdownElement) {
+        let xa = document.getElementById('akin').value;
+        let xb = document.getElementById('oye').value;
+        let xc = Number(xb) - Number(xa);
+        let xd = 60000*60 * xc;
+        let now = new Date().getTime();
+        let sum = now + xd;
+
+
+        let xaa = document.createTextNode(xa);
+        let xaaa = document.createElement('td');
+        xaaa.appendChild(xaa);
+        d.appendChild(xaaa);
+
+        let xbb = document.createTextNode(xb);
+        let xbbb = document.createElement('td');
+        xbbb.appendChild(xbb);
+        d.appendChild(xbbb);
+         xa.value=' '
+         xb.value=' '
+        function updatedCountdown() {
+          a=document.getElementById('olu')
+
+            let now = new Date().getTime();
+            let diff = sum - now;
+            if (diff <= 0) {
+                countdownElement.textContent = 'Expired';
+                countdownElement.style.color = 'red';
+            }
+            else if(document.getElementById("olu").value==' '  ||xa.value=='' || xb.value==''){
+             alert(`The input can not be left empty`)
+            }
+            else if(  isNaN(xa) || isNaN(xb)){
+              alert('Pls enter a valid input')
+
+            }
+             else {
+                let days = Math.floor(diff / (1000 * 60 * 60 * 24));
+                let hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                let mins = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+                let sec = Math.floor((diff % (1000 * 60)) / 1000);
+
+                countdownElement.textContent = `${formatTime(hours)}:${formatTime(mins)}:${formatTime(sec)}`;
+            };
+        };
+
+        function formatTime(time) {
+            return time < 10 ? `0${time}` : time;
+        };
+        updatedCountdown();
+        m = setInterval(updatedCountdown, 1000);
+    };
+    document.getElementById('olu').value=' '
+     document.getElementById('akin').value=' '
+     document.getElementById('oye').value=' '
+    // let boy=document.createElement('button')
+    // let soy=document.createTextNode('\u2714')
+    // boy.appendChild(soy)
+    // boy.backgroundColor='green'
+    // boy.style.color='white'
+    // let jiji = document.createElement('td')
+    // jiji.appendChild(boy);
+    // d.appendChild(jiji);
+    // boy.addEventListener('click',()=>{
+    //   d.style.textDecoration='line-through'
+    // })
+
+    let sap = document.createElement('span');
+    let ca = document.createTextNode('\u2714'); // Checkmark character entity
+    sap.appendChild(ca)
+    sap.style.backgroundColor = 'green';
+    sap.style.color = 'white';
+    sap.style.cursor = 'pointer';
+    sap.className = 'done';
+    sap.title = 'mark done';
+    let jiji = document.createElement('td');
+    jiji.appendChild(sap);
+    d.appendChild(jiji);
+    let da = document.getElementsByClassName('done');
+       sap.addEventListener('click',()=>{
+        d.style.textDecoration='line-through'
+        d.style.textDecorationLine.fontsize='20px'
+        d.parentNode.style.cursor = 'pointer';
+            clearInterval(m);
+       })
+      
+    
+    // for ( i = 0; i < da.length; i++) {
+    //     da[i].onclick = function () {
+    //         d.style.textDecoration = 'line-through';
+    //          this.parentNode.style.cursor = 'pointer';
+    //         clearInterval(m);
+    //     };
+    // };
+
+    let sag = document.createElement('span');
+    let f = document.createTextNode('\u00d7'); // Cross character
+    sag.appendChild(f);
+    sag.style.backgroundColor = 'red';
+    sag.style.color = 'white';
+    sag.style.cursor = 'pointer';
+    sag.className = 'undo';
+    sag.title = 'delete';
+   
+    let jijo = document.createElement('td');
+    jijo.appendChild(sag);
+    d.appendChild(jijo);
+
+    let h = document.getElementsByClassName('undo');
+
+    sag.addEventListener('click',()=>{
+        d.style.display='none'
+        d.parentNode.style.cursor = 'pointer';
+            clearInterval(m);
+       })
+    
+    let sage = document.createElement('span');
+    let fe = document.createTextNode('\u00d7'); // Cross character
+    sage.appendChild(fe);
+    sage.style.backgroundColor = 'red';
+    sage.style.color = 'white';
+    sage.style.cursor = 'pointer';
+    sage.className = 'edit';
+    sage.title = 'Edit';
+   
+    let jijoe = document.createElement('td');
+    jijoe.appendChild(sage);
+    d.appendChild(jijoe);
+
+    
+
+    sage.addEventListener('click',()=>{
+        d.style.display='none'
+        document.getElementById('olu').value= `input new task`
+        document.getElementById('akin').value= `editted time`
+        document.getElementById('oye').value= `editted time`
+        d.parentNode.style.cursor = 'pointer';
+            clearInterval(m);
+       })
+    
+
+    let all = document.getElementById('jojo');
+    all.appendChild(d);
+}
+
+
+
+
+       
+
+
+
+
+
+
+     
+   
+    
+
+  </script>
+</body>
+
+</html>

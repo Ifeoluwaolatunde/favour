@@ -19,13 +19,112 @@
             #ola::nth-child(2nd){
                 color: black;
             }
+           
         </style>
     </head>
     <body>
-        <h1 id="ola"> </h1>
+        <h1 id="ola" style="display: none;"> </h1>
+
+        <span id="min">00</span>
+        <span>:</span>
+        <span id="sec">00</span>
+
+        <button id="start">START</button>
+        <button id="pause">PAUSE</button>
+        <button id="cont">CONTINUE</button>
+        <button id="stop">STOP</button>
+        <button id="reset">RESET</button>
         
         <script>
-        let count= new Date('April 9,2024').getTime();
+        let minutes= document.getElementById('min');
+        let second= document.getElementById('sec');
+        let startbtn= document.getElementById('start');
+        let pausebtn= document.getElementById('pause');
+        let contbtn= document.getElementById('cont');
+        let stopbtn= document.getElementById('stop');
+        let resetbtn= document.getElementById('reset');
+
+        pausebtn.style.display='none'
+        stopbtn.style.display='none'
+        contbtn.style.display='none'
+        resetbtn.style.display='none'
+
+        let ebe=0;
+        let p;
+
+        function startengine(){
+            ++ebe;
+            let mym=parseInt(ebe/60);
+            let mys=ebe%60;
+
+            mym=(mym<10)? '0'+mym:mym;
+            mys=(mys<10)? '0'+mys:mys;
+
+             minutes.innerHTML=mym
+             second.innerHTML=mys
+
+            startbtn.style.display='none'
+            pausebtn.style.display='inline-block'
+            stopbtn.style.display='inline-block'
+            resetbtn.style.display='none'
+
+        }
+        function starter(){
+             p=setInterval(startengine , 1000)
+        }
+
+        function pauseengine(){
+            clearInterval(p)
+            pausebtn.style.display='none'
+            contbtn.style.display='inline-block'
+            stopbtn.style.display='inline-block'
+            
+
+        }
+       function contengine(){
+          starter();
+          pausebtn.style.display='inline-block'
+            contbtn.style.display='none'
+            stopbtn.style.display='inline-block'
+       }
+       function stopengine(){
+         ebe=0;
+            minutes.innerHTML='00'
+            second.innerHTML='00'
+            resetbtn.style.display='inline-block'
+            pausebtn.style.display='none'
+          stopbtn.style.display='none' 
+
+
+            clearInterval(p);
+
+       }
+
+       function resetengine(){
+        ebe=0;
+        minutes.innerHTML=0+'0'
+        second.innerHTML=0+'0'
+        pausebtn.style.display='none'
+        stopbtn.style.display='none'
+        startbtn.style.display='inline-block'
+        startbtn.innerHTML='START AGAIN'
+        resetbtn.style.display='none'
+
+       }
+       
+       startbtn.addEventListener('click', starter)
+       pausebtn.addEventListener('click',pauseengine)
+       contbtn.addEventListener('click',contengine)
+       stopbtn.addEventListener('click',stopengine)
+       resetbtn.addEventListener('click',resetengine)
+
+
+
+
+
+
+
+        let count= new Date('April 26,2024').getTime();
         let now= new Date().getTime();
          let lolo= setInterval(counting, 1000);
          function counting(){
@@ -41,6 +140,10 @@
             document.getElementById('ola').innerHTML=`Bye bye`
           }
          }
+
+
+
+
 
         </script>
     </body>

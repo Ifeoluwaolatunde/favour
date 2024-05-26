@@ -282,7 +282,7 @@
       let a = document.getElementById('olu').value;
       let b = document.createTextNode(a)
       let sap = document.createElement('span')
-      let c = document.createTextNode('\u2714');
+      let c = document.createTextNode('\u2714'); //character entity
       let fa = document.createTextNode(' ')
       sap.appendChild(c)
       sap.style.backgroundColor = 'green'
@@ -318,17 +318,17 @@
 
       for (i = 0; i < d.length; i++) {
         d[i].onclick = function () {
-
-          this.parentNode.style.textDecoration = 'line-through'
           this.parentNode.style.cusor = 'pointer'
+          this.parentNode.style.textDecoration = 'line-through'
         }
       }
 
-      for (i = 0; i < h.length; ++i) {
+      for (i = 0; i < h.length; i++) {
         h[i].onclick = function () {
 
           this.parentNode.style.display = 'none'
-          this.parentNode.style.cusor = 'pointer'
+          document.getElementById('pass').style.display='none'
+         // this.parentNode.style.cusor = 'pointer'
         }
       }
 

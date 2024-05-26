@@ -28,20 +28,20 @@
         }
         #bla{
             background-color:rgba(0, 0, 0,0.3);
-            width: 40%;
+            width: 50%;
             height: 400px;
             border-radius: 10 20;
 
         }
         #sal{
             background-color: rgba(0, 0, 0, 0.5);
-            width: 40%;
+            width: 50%;
             height: 400px;
             border-radius: 10 20;
         }
         #cal{
             background-color: rgba(0, 0, 0, 0.5);
-            width: 40%;
+            width: 50%;
             height: 400px;
             border-radius: 10 20;
         }
@@ -135,7 +135,7 @@
         <br><br><br>
         <h4>Welcome user...</h4>
        <span> <input type="text" placeholder="your location" id='nik'> <input id='nike' type="text" placeholder="destination"></span>
-        <br>
+        <span id="san"></span>    <span id="sane" style="margin-left: 10px;"></span>
         <br>
         <br>
         <button style="background-color:white;color: blue;font-weight: bold;" id="book">Book Ride</button>
@@ -153,6 +153,8 @@
             <span id="ade">00</span>
         </h1>
         <button style="background-color: green;" id="sta"> Start Trip</button>
+        <button style="background-color: yellow;" id="pas"> Pause Trip</button>
+        <button style="background-color: orange;" id="conti"> continue </button>
         <button style="background-color: red;" id="end">End Trip</button>
      </div>
      
@@ -160,24 +162,24 @@
         <br><br>
         <h3 style="font-weight: bolder;">Hope you had a nice trip?<span> <label for="checkbox">Click if yes</label><input type="checkbox"></span></h3>
        
-       <br>
+       
     
        <table cellpadding="5" cellspacing="0" border="1" width="60%" height="200" >
-        <th style="font-weight: bolder; ">RECIEPT FOR TRIP</th>
+        <th style="font-weight: bolder;text-align: center; ">RECIEPT FOR TRIP</th>
         <tr>
-            <td>Base fare</td>
+            <td><strong>Base fare</strong></td>
             <td id="base"></td>
         </tr>
         <tr>
-            <td>Time</td>
+            <td><strong>Time</strong></td>
             <td id="timetaken"></td>
         </tr>
         <tr>
-            <td>Sum</td>
+            <td><strong>Sum</strong></td>
             <td id="total"></td>
         </tr>
         <tr>
-            <td>Tax</td>
+            <td><strong>Tax</strong></td>
             <td id="tax"></td>
         </tr>
         <tr>
@@ -187,9 +189,8 @@
             <td id="payable"></td>
         </tr>
 
-       </table><br>
-       <button class="ac"><a href="brief.html">Back</a></button>  <button class="ac"><a href="todo.html">Next</a></button> 
-
+       </table><br><br>
+       <h3>Thank you for your patronage...have a nice day.</h4>
        
      </div>
 
@@ -201,6 +202,8 @@
         let sec=document.getElementById('ade');
         let start=document.getElementById('sta');
         let stopbtn=document.getElementById('end');
+        let pausebtn=document.getElementById('pas');
+        let contbtn=document.getElementById('conti');
         let booking=document.getElementById('book');
         let input1=document.getElementById('nik');
         let input2= document.getElementById('nike');
@@ -210,11 +213,35 @@
         let c=document.getElementById('cal');
         let bas=1000
         let ten=20;
+        let wa=document.getElementById('nik');
+        let we=document.getElementById('nike');
+
+        wa.addEventListener('enter',()=>{
+            if(wa.value ==''){
+             document.getElementById('san').innerHTML='pls input your location'
+             document.getElementById('book').style='disabled'
+            }
+            else{
+                document.getElementById('san').innerHTML=' '
+            }
+        })
+
+        we.addEventListener('enter',()=>{
+            if(we.value ==''){
+             document.getElementById('san').innerHTML='pls input your destination'
+            }
+            else{
+                document.getElementById('san').innerHTML=' '
+            }
+        })
        
 
        
         b.style.display='none'
         c.style.display='none'
+        document.getElementById('pas').style.display='none'
+        document.getElementById('conti').style.display='none'
+        
          
          
         booking.addEventListener('click',()=>{
@@ -244,12 +271,17 @@
              min.innerHTML=mins;
             sec.innerHTML=secs;
            document.getElementById('sta').style.display='none'
+           document.getElementById('pas').style.display='inline-block'
+           document.getElementById('conti').style.display='none'
+
+           let sup= Number(mins*20)
+            let ja=Number( sup+(+secs))
+            let a=parseInt(ja) 
+            let b=parseInt( 1000+(+ja))
+            let c=parseInt( (10/100)*b)
+            let d=Math.floor(c+b)
             
-            let a=20*(+mins) 
-            let b= 1000+(20*(+mins))
-            let c= (10/100)*b
-            let d=c+b
-            document.getElementById('timetaken').innerHTML=`${mins} x N20 = N${a}`
+            document.getElementById('timetaken').innerHTML=`Time used x N20 = N${a}`
             document.getElementById('total').innerHTML=`N${b}`
             document.getElementById('tax').innerHTML=`N${c}`
             document.getElementById('payable').innerHTML=`N${d}`
@@ -258,11 +290,33 @@
 
             
           }
+          
          
           function count(){
             
             k=setInterval(startengine,1000)
+            
         }
+        
+        function pauseengine(){
+            clearInterval(k);
+           start.style.display='none'
+           stopbtn.style.display='inline-block'
+           pausebtn.style.display='none'
+           contbtn.style.display='inline-block'
+
+        }
+
+        function contengine(){
+            count()
+            document.getElementById('conti').style.display='none'
+            stopbtn.style.display='inline-block'
+           pausebtn.style.display='inline-block'
+          
+
+
+        }
+        contbtn.style.display='none'
         function stopengine(){
             // ife=0;
             //  min.innerHTML=0+'0';
@@ -270,13 +324,18 @@
              
             a.style.display='none'
             b.style.display='none'
+            // document.getElementById('pas').style.display='inline-block'
            c.style.display='inline-block'
              clearInterval(k)
 
         } 
+        document.getElementById('pas').style.display='inline-block'
+        document.getElementById('conti').style.display='none'
+
         start.addEventListener('click',count);
         stopbtn.addEventListener('click',stopengine);
-       
+        pausebtn.addEventListener('click',pauseengine)
+        contbtn.addEventListener('click',contengine)
         document.getElementById('base').innerHTML=`${bas}`
         
 
