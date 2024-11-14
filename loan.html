@@ -250,8 +250,8 @@
             background-color: rgb(230, 111, 131);
             padding: 20px;
             padding-bottom: 30px;
-            width: 300px;
-            height: 400px;
+            width: 310px;
+            height: 420px;
             margin-left: 0px;
             border-radius: 5px;
             margin-top: 100px;
@@ -260,8 +260,8 @@
             background-color: rgb(230, 111, 131);
             padding: 20px;
             padding-bottom: 50px;
-            width: 300px;
-            height: 400px;
+            width: 310px;
+            height: 420px;
             border-radius: 5px;
             margin-left: 10px;
             margin-top: 20px;
@@ -398,7 +398,7 @@
                                 <br>
                               <span id="write"></span>
 
-                             <h2><i>ACCOMMODATION</i></h2>
+                           <!--  <h2><i>ACCOMMODATION</i></h2>
                           
                          
 
@@ -414,7 +414,7 @@
                                             <option value="">Comfort Zone(N5000-15000)</option>
                                             <option value="">Rose Double(N15000-30000)</option>
                                             <option value="">Exclusive offer(N50000-7500)</option>
-                                        </select>
+                                        </select> -->
                         </div>
     </div>
 
@@ -458,7 +458,7 @@
             let duration= document.getElementById('duration').value;
             let profit=0.15*invest;
             let withdrawl=Number(profit * duration)+ Number(invest);
-            document.getElementById('ade').innerHTML=`You will withdraw N${withdrawl} after ${duration}Month(s) you invest N${invest}with us `;
+            document.getElementById('ade').innerHTML=`You will withdraw N${withdrawl} after ${duration}Month(s) of investing N${invest}with us `;
           })
 
        fine.addEventListener('click',()=>{
@@ -535,7 +535,7 @@
                 let intrestrate=Number( intrest*investO);
                 let total=Number(intrestrate+investO);
                 let monthly=Number(total / dura);
-                document.getElementById('write').innerHTML=`You will Repay N${total} by paying the sum of N${monthly} when you borrow
+                document.getElementById('write').innerHTML=`You will Repay N${total} by paying the sum of N${monthly} monthly  when you borrow
                 ${investO} for ${dura}months`;
 
                 });
@@ -616,13 +616,13 @@
             else{
                 for(o = 2; o < m; o++){
                     if(m%o == 0){
-                        alert(`No, ${m} it is not a prime number`);
+                        alert(`No, ${m}  is not a prime number`);
                         break;
                         
                     }
                 }  
                      if(m == o){
-                        alert(`Yes, ${m}it is  a prime number`);
+                        alert(`Yes, ${m}is  a prime number`);
                         
                     }
                 
